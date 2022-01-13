@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="finnish" xml:lang="finnish">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Kehityksen työvälineet | Front End -sovelluksen toteutus</title>
+  <meta name="description" content="1 Kehityksen työvälineet | Front End -sovelluksen toteutus Reactilla" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Kehityksen työvälineet | Front End -sovelluksen toteutus" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://github.com/sasky-koodaaja/frontend" />
+  <meta property="og:image" content="https://github.com/sasky-koodaaja/frontend/images/logo.png" />
+  <meta property="og:description" content="1 Kehityksen työvälineet | Front End -sovelluksen toteutus Reactilla" />
+  <meta name="github-repo" content="sasky-koodaaja/frontend" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Kehityksen työvälineet | Front End -sovelluksen toteutus" />
+  
+  <meta name="twitter:description" content="1 Kehityksen työvälineet | Front End -sovelluksen toteutus Reactilla" />
+  <meta name="twitter:image" content="https://github.com/sasky-koodaaja/frontend/images/logo.png" />
+
+<meta name="author" content="Pekka Tapio Aalto" />
+
+
+<meta name="date" content="2022-01-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Front End -sovelluksen toteutus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Johdanto</a></li>
+<li class="chapter" data-level="1" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html"><i class="fa fa-check"></i><b>1</b> Kehityksen työvälineet</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#komentorivi"><i class="fa fa-check"></i><b>1.1</b> Komentorivi</a>
+<ul>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#komentorivin-käynnistäminen"><i class="fa fa-check"></i>Komentorivin käynnistäminen</a></li>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#komentorivin-käyttäminen"><i class="fa fa-check"></i>Komentorivin käyttäminen</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#node.js"><i class="fa fa-check"></i><b>1.2</b> Node.js</a>
+<ul>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#node.jsn-asennus"><i class="fa fa-check"></i>Node.js:n asennus</a></li>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#asennuksen-onnistumisen-tarkistaminen"><i class="fa fa-check"></i>Asennuksen onnistumisen tarkistaminen</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#npm"><i class="fa fa-check"></i><b>1.3</b> npm</a>
+<ul>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#suoritus-ilman-asentamista"><i class="fa fa-check"></i>Suoritus ilman asentamista</a></li>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#paketin-asentaminen-globaalisti"><i class="fa fa-check"></i>Paketin asentaminen globaalisti</a></li>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#testcafe-paketin-asennus"><i class="fa fa-check"></i>TestCafe-paketin asennus</a></li>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#jest-paketin-asennus"><i class="fa fa-check"></i>Jest-paketin asennus</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#visual-studio-code"><i class="fa fa-check"></i><b>1.4</b> Visual Studio Code</a>
+<ul>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#visual-studio-coden-asentaminen"><i class="fa fa-check"></i>Visual Studio Coden asentaminen</a></li>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#visual-studio-coden-testaaminen"><i class="fa fa-check"></i>Visual Studio Coden testaaminen</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#git"><i class="fa fa-check"></i><b>1.5</b> Git</a>
+<ul>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#gitin-asentaminen"><i class="fa fa-check"></i>Gitin asentaminen</a></li>
+<li class="chapter" data-level="" data-path="kehityksen-työvälineet.html"><a href="kehityksen-työvälineet.html#gitin-alkuasetukset"><i class="fa fa-check"></i>Gitin alkuasetukset</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/sasky-koodaaja/frontend" target="blank">toteutettu bookdownilla</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Front End -sovelluksen toteutus</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="kehityksen-työvälineet" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Kehityksen työvälineet</h1>
+<p>Sujuvassa Front End -sovellusten kehityksessä tarvitaan melkoinen määrä erilaisia työkaluja, kuten esimerkiksi</p>
+<ul>
+<li>komentorivi (PowerShell),</li>
+<li>kehitysympäristön työkaluohjelmat (Node.js),</li>
+<li>koodaamiseen soveltuva tekstieditori (Visual Studio Code),</li>
+<li>lähdekoodin hallinta eli versiohallinta (Git).</li>
+</ul>
+<p>Seuraavaksi asennamme nämä työvälineet yksi kerrallaan ja testaamme yksinkertaisella testillä, että niiden asennus on onnistunut.</p>
+<div id="komentorivi" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Komentorivi</h2>
+<p>Ensimmäinen käyttöönotettava työväline on komentorivi. Ennen graafisia käyttöliittymiä tietokoneita käytettiin merkkipohjaisen komentorivin kautta. Sekä Front End että Back End -sovellusten kehityksessä on hyvä osata komentorivin perusteet.</p>
+<div id="komentorivin-käynnistäminen" class="section level3 unnumbered">
+<h3>Komentorivin käynnistäminen</h3>
+<div id="windows" class="section level4 unnumbered">
+<h4>Windows</h4>
+<p>Windowsissa komentoriviä voi käyttää useammalla tavalla. Komentokehote (Command Prompt) perustuu DOS-käyttöjärjestelmän toimintaan ja se on osana nykyistä Windowsia yhteensopivuussyistä. Alkuperäisen komentokehotteen korvaajaksi on kehitetty PowerShell, joka toi Windows-maailmaan Unix-ympäristöissä pitkään olleita ominaisuuksia. Tämän koulutuksen aikana käytämme PowerShelliä.</p>
+<p>Helpoiten PowerShellin voi käynnistää kirjoittamalla Windowsin hakuikkunaan teksti <strong>powershell</strong> ja valitsemalla tarjotuista vaihtoehdoista <strong>Windows Powershell</strong>.</p>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="kuvat/tyovalineet-powershell-kaynnistys.png" alt="Powershellin käynnistäminen" width="80%" />
+<p class="caption">
+Figure 1.1: Powershellin käynnistäminen
+</p>
+</div>
+<p></p>
+<p>Ruudulle avautuu pienen hetken päästä PowerShell-ikkuna, jossa vilkkuu kursori sen merkiksi, että sille voi syöttää suoritettava komento.</p>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="kuvat/tyovalineet-powershell-ikkuna.png" alt="Powershell käynnistetty" width="80%" />
+<p class="caption">
+Figure 1.2: Powershell käynnistetty
+</p>
+</div>
+<p></p>
+<p>Voit sulkea PowerShell-ikkunan, jota kutsutaan myös istunnoksi (session) joko klikkaamalla ikkunan oikeassa yläkulmassa olevaa rastia tai antamalla komento <code>exit</code>.</p>
+<blockquote>
+<p>Windowsissa voi käyttää myös Windows Terminal -sovellusta, joka löytyy ilmaiseksi Microsoft Storesta. Se tukee välilehtiä ja sen kautta pystyy käynnistämään PowerShell-istunnon, komentokehotteen (Command Prompt) tai halutessaan sille voi määritellä SSH-yhteyden omaksi valinnakseen.</p>
+</blockquote>
+</div>
+<div id="mac" class="section level4 unnumbered">
+<h4>Mac</h4>
+<p>Macissä on oma komentorivinsä, jonka voi käynnistää käynnistää klikkaamalla <em>LaunchPad</em>-ikonia, kirjoittamalla hakukenttään <strong>Terminal</strong> ja valitsemalla sen jälkeen <strong>Terminal</strong>. Lisäohjeita löydät Macin <a href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">käyttöohjeista</a>.</p>
+</div>
+<div id="linux" class="section level4 unnumbered">
+<h4>Linux</h4>
+<p>Jokaisesta Linuxista löytyy joku terminaali, haasteellisempaa on löytää se, miten se käynnistetään, koska käynnistäminen vaihtelee jakeluversiosta ja käytettävästä graafisesta ympäristöstä riippuen. Tyypillisesti se löytyy syöttämällä hakusanoiksi <em>terminal</em>, <em>command</em>, <em>prompt</em> tai <em>shell</em>. Useimmissa järjestelmissä komentorivi on nimeltään Terminal tai xterm. Monissa jakeluversiossa toimii myös pikanäppäinyhdistelmä <em>Ctrl+Alt+T</em>. Lisäohjeita löydät mm. Ubuntun <a href="https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal">käyttöohjeista</a>.</p>
+</div>
+</div>
+<div id="komentorivin-käyttäminen" class="section level3 unnumbered">
+<h3>Komentorivin käyttäminen</h3>
+<div id="kansiorakenteessa-liikkuminen" class="section level4 unnumbered">
+<h4>Kansiorakenteessa liikkuminen</h4>
+<p>Riippumatta siitä, mitä käyttöjärjestelmää käytät, on komentorivin peruskäyttö hyvin samanlaista. Aivan ensimmäiseksi kannattaa opetella liikkumaan hakemistorakenteen sisällä. Lähtökohtaisesti komennolla <code>dir</code> saat listattua nykyisessä kansiossa olevat tiedostot ja hakemistot. Esimerkiksi Windowsissa komennon tulos näyttäisi seuraavanlaiselta:</p>
+<pre><code>PS C:\Users\Koodaajaguru&gt; dir
+
+    Directory: C:\Users\Koodaajaguru
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-r---          1.9.2020      7.16                3D Objects
+d-r---          1.9.2020      7.16                Contacts
+d-r---          9.3.2021     13.40                Desktop
+d-r---          7.4.2021     14.34                Documents
+d-r---          7.4.2021     14.34                Downloads
+...
+d-r---          1.9.2020      7.16                Searches
+d-r---          5.9.2020     13.24                Videos
+-a----          1.9.2020     12.26            293 .gitconfig</code></pre>
+<p>Edellisessä listauksessa kaikki d-kirjaimella alkavat rivit (d-r—) ovat hakemistoja ja loput ovat tavallisia tiedostoja. Alihakemistoon pystyt siirtymään <code>cd</code>-komennolla. Esimerkiksi Windowsissa voit siirtyä käyttäjän Tiedostot-kansioon (Documents) komennolla</p>
+<pre><code>cd Documents</code></pre>
+<p>Tämän seurauksena komentokehoite muuttuu niin, että se ilmaisee uuden sijainnin.</p>
+<blockquote>
+<p>Windows on hieman kieroutunut kansion nimien suhteen. Jos tätä kansiota katsotaan Resurssienhallinnan kautta, niin se näkyy suomenkielisessä Windowsissa suomennettuna eli nimellä Tiedostot. Todellisuudessa tämä kansio levytasolla on nimellä Documents ja tätä alkuperäistä nimeä on käytettävä komentorivillä siihen viitattaessa.</p>
+</blockquote>
+<pre><code>PS C:\Users\Koodaajaguru\Documents&gt;</code></pre>
+<p>Macissä ja Linuxissa voit kokeilla siirtymistä mihin tahansa omassa tiedostolistauksessasi olevaan kansioon. Hakemistopuussa liikkuminen on turvallista, se ei sekoita tietokonetta.</p>
+<p>Kansiossa, johon edellisessä vaiheessa siirryit, voit tehdä jälleen samat toiminnot eli listata kansiossa olevat tiedostot komennolla <code>dir</code> ja siirtymällä kansiossa olevaan alikansioon komennolla <code>cd alikansio</code>.</p>
+<p>Välillä tulee tilanne, että olisi tarve siirtyä yhtä kansiota ylemmäs. Tämä onnistuu helpoiten komennolla</p>
+<pre><code>cd ..</code></pre>
+<p>Tämän seurauksena käyttäjä on siirtynyt kansiotasoa ylemmäs eli malliesimerkissä takaisin <code>C:\Users\Koodaajaguru</code> -kansioon.</p>
+<p>Kahdella pisteellä on oma erityismerkityksensä hakemistopoluissa. Se viittaa aina kansion ns. äitikansioon eli siihen pääkansioon, jonka alla kansio sijaitsee. Kansion ja sen alikansion voi niputtaa yhteen käyttämällä erottimena hakemistoerotinta eli /-merkkiä. Esimerkiksi komento <code>cd ../..</code> siirtyisi <code>C:\Users\Koodaajaguru\Documents</code> -kansiosta <code>C:\Users</code>-kansioon eli kahta kansiotasoa ylemmäs. Vastaavasti komento <code>cd ../Downloads</code>siirtyisi <code>C:\Users\Koodaajaguru\Documents</code> -kansiosta <code>C:\Users\Koodaajaguru\Downloads</code>-kansioon eli käyttäjän Lautaukset-kansioon.</p>
+<p>Jos olet eksynyt hakemistopuuhun ja haluat palata takaisin käyttäjän kotikansioon, niin se onnistuu helpoiten komennolla</p>
+<pre><code>cd ~</code></pre>
+</div>
+<div id="alikansion-luominen" class="section level4 unnumbered">
+<h4>Alikansion luominen</h4>
+<p>Sen lisäksi, että osaat liikkua kansiorakenteessa, saatat joutua luomaan uusia alikansiota. Tämäkin tapahtuu peruspiirteissään samalla tavalla riippumatta siitä, että käytätkö Windowsia, Linuxia tai macOsia. Uusi alikansio luodaan <code>mkdir</code>-komennolla, joka on lyhenne sanoista <em>make directory</em>.</p>
+<p>Seuraavaksi luomme kotihakemistoon alikansion, jonne keräämme koulutuksen aikana toteutettavat projektit.</p>
+<div id="windows-1" class="section level5 unnumbered">
+<h5>Windows</h5>
+<p>Siirrytään ensin käyttäjän Tiedostot-kansioon komennolla</p>
+<pre><code>cd ~/Documents</code></pre>
+<p>ja luodaan Tiedostot-kansioon uusi <em>projektit</em>-niminen alikansio komennolla</p>
+<pre><code>mkdir projektit</code></pre>
+<p>Jatkossa pääset seuraavalla komennolla projektit-kansioon, aina kun käynnistät PowerShellin uudestaan.</p>
+<pre><code>cd ~/Documents/projektit</code></pre>
+</div>
+<div id="linux-ja-macos" class="section level5 unnumbered">
+<h5>Linux ja macOS</h5>
+<p>Unix-pohjaissa käyttöjärjestelmissä kotikansiomalli on erilainen kuin Windowsissa. Tästä johtuen luomme projektit-kansion käyttäjän kotikansion alle. Siirrytään ensin käyttäjän kotikansioon komennolla</p>
+<pre><code>cd ~</code></pre>
+<p>ja luodaan uusi <em>projektit</em>-niminen alikansio komennolla</p>
+<pre><code>mkdir projektit</code></pre>
+<p>Jatkossa pääset seuraavalla komennolla projektit-kansioon, aina kun käynnistät komentorivin.</p>
+<pre><code>cd ~/projektit</code></pre>
+<blockquote>
+<p>Voit halutessasi nimetä projektit-kansion jollain toisella nimellä, mutta muista käyttää tätä antamaasi nimeä jatkossa, kun materiaalissa käytetään projektit-kansiota.</p>
+</blockquote>
+<p>Edellä on todellisuudessa aivan pieni pintaraapaisu siitä, mitä komentorivillä voi tehdä. Tässä vaiheessa riittää, että osaat liikkua hakemistopuussa ylös- ja alaspäin sekä osaat luoda uusia alikansiota. Samoja asioita käsitellään myös <a href="https://www.youtube.com/watch?v=SMqcepv0zqE">Koodauksen työvälineet - Komentorivi</a> -videossa.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="node.js" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Node.js</h2>
+<p>Toinen jatkossa paljonkin käytettävä työväline on <em>Node.js</em>-ympäristö. Se on ajoympäristö, joka mahdollistaa JavaScriptillä toteutettujen ohjelmien suorittamisen omalla koneella. Node.js on ladattavissa yleisimmille käyttöjärjestelmille. Toisin sanoen sille löytyy valmiit asennuspaketit Windowsille, Linuxille ja macOSille.</p>
+<div id="node.jsn-asennus" class="section level3 unnumbered">
+<h3>Node.js:n asennus</h3>
+<ol style="list-style-type: decimal">
+<li>Mene selaimella osoitteeseen <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>.</li>
+</ol>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="kuvat/tyovalineet-nodejs-asennus-1.png" alt="Node.js-sivusto" width="80%" />
+<p class="caption">
+Figure 1.3: Node.js-sivusto
+</p>
+</div>
+<p></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Klikkaa <strong>Current</strong>-vaihtoehtoa, se on uusin ja viimeisin käännetty Node.js-versio. LTS-vaihtoehto on vakaampi versio, joka on ensisijaisesti tarkoitettu tuotantokäyttöön tai tilanteisiin, jossa uusimman version ominaisuuksia ei ole vielä tuettu.</p>
+<p>Sivusto tunnistaa automaattisesti käyttämäsi käyttöjärjestelmän ja tarjoaa sitä vastaavaa asennuspakettia. Jos näin ei kuitenkaan tapahdu, niin klikkaa silloin sivun yläreunasta Downloads-valinta ja valitse sieltä käyttöjärjestelmääsi vastaava asennuspaketti.</p></li>
+<li><p>Käynnistä lataamasi asennuspaketti tuplaklikkaamalla sitä. Seuraavat ohjeet noudattavat Windows-paketin asennusvaiheita, jos asennat ympäristöä toiselle käyttöjärjestelmälle, niin asennuksen kulku on silloin erilainen.</p>
+<ul>
+<li>Klikkaa <em>Welcome to Node.js Setup Wizard</em> -näkymässä <strong>Next</strong>.</li>
+<li>Hyväksy <em>End-User License Agreement</em> -näkymässä lisenssi valitsemalla <strong>I accept the terms in the License Agreement</strong> ja klikkaa <strong>Next</strong>.</li>
+<li>Hyväksy tarjottu asennuskansio <em>Destination Folder</em> -näkymässä klikkaamalla <strong>Next</strong>.</li>
+<li>Hyväksy asennettavat paketit <em>Custom Setup</em> -näkymässä klikkaamalla <strong>Next</strong>.</li>
+<li>Tässä koulutuksessa ei ole tarvetta kääntää moduuleita, joten <em>Tool for Native Modules</em> -näkymässä ei tehdä tarjottua valintaa, vaan klikataan ainoastaan <strong>Next</strong>.</li>
+<li>Hyväksy lopulta <em>Ready to install Node.js</em> -näkymässä Node.js-ympäristön asennus tekemilläsi valinnoilla klikkaamalla <strong>Install</strong>. Asennusohjelma kysyy pääkäyttäjän oikeuksia, jotka sinun tulee myöntää.</li>
+<li>Asennusohjelma asentaa kaikki tarvittavat tiedostot sekä määrittelee polkuasetuksen. Lopulta asennusohjelma päättyy <em>Completed the Node.js Setup Wizard</em> -näkymään, jossa voit klikata <strong>Finish</strong> päättääksesi asennusohjelman.</li>
+</ul></li>
+<li><p>Windowsin Node.js hyödyntää taustalla PowerShell-skriptejä, joiden suorittaminen on oletusarvoisesti estetty. Jotta nämä skriptit toimivat ongelmitta, on sinun tehtävä seuraava määrittely koneellesi PowerShellin kautta:</p>
+<pre><code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code></pre>
+<p>Tämä komento sallii paikallisten PowerShell-skriptien suorittamisen käyttäjällä, jolla olet kirjautunut sisälle. Ladatut skriptit vaativat jatkossa ns. allekirjoituksen. Komento varmistaa vielä, että olet tietoinen muutoksen sivuvaikutuksista. Vastaa tähän kysymykseen <strong>Y</strong> eli <strong>Yes</strong>.</p>
+<p>Komennon suorituksen jälkeen komentorivi näyttää seuraavanlaiselta:</p>
+<pre><code>PS C:\Users\Koodaajaguru&gt; Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the 
+execution policy might expose you to the security risks described in the 
+about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is &quot;N&quot;): Y</code></pre></li>
+</ol>
+</div>
+<div id="asennuksen-onnistumisen-tarkistaminen" class="section level3 unnumbered">
+<h3>Asennuksen onnistumisen tarkistaminen</h3>
+<p>Seuraavaksi tarkistetaan, että Node.js-ympäristö toimii niin, että voimme sitä jatkossa käyttää. Tulosta asennetun Node.js:n versionumero komennolla</p>
+<pre><code>node -v</code></pre>
+<p>Tämä komento tulostaa asennetun ympäristön versionumeron, tässä materiaalissa asennetulla versiolla tulostuu</p>
+<pre><code>v17.3.1</code></pre>
+<p>Asentamasi versio on todennäköisesti eri. Oleellista on, että komento tulostaa versionumeron, joka on sama tai uudempi kuin esimerkissä. Tarkistetaan myös, että npm-pakettihallinta on asentunut oikein syöttämällä komento</p>
+<pre><code>npm -v</code></pre>
+<p>Komento tulostaa asennetun npm-sovelluksen versionumeron, joka on materiaalin asennuspaketilla</p>
+<pre><code>8.3.0</code></pre>
+<p>Tässäkin tapauksessa versionumero voi poiketa. Oleellista on, että versionumero on sama tai uudempi kuin esimerkissä.</p>
+<p>Nämä samat asiat käsitellään myös <a href="https://www.youtube.com/watch?v=bFELPMx68m8">Koodauksen työvälineet - Node.js</a> -videossa sillä erolla, että videossa asennetaan vanhempi versio Node.js-ympäristöstä.</p>
+</div>
+</div>
+<div id="npm" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> npm</h2>
+<p>Node.js-ympäristön mukana asennettiin <em>npm</em>-niminen sovellus, jolla voi asentaa, päivittää ja poistaa npm-kirjastossa julkaistuja paketteja. npm tulee sanoista Node Package Management ja sen kirjasto sisältää uskomattoman määrän eri käyttötarkoituksiin toteutettuja JavaScript-sovelluksia, jotka auttavat joko sovelluskehityksessä, ylläpidossa tai niitä voi hyödyntää osana omaa sovellusta.</p>
+<div id="suoritus-ilman-asentamista" class="section level3 unnumbered">
+<h3>Suoritus ilman asentamista</h3>
+<p>npm-pakettien suorittaminen vaatii, että niiden sovelluskoodit löytyvät suorittavalta koneelta. Aikaisemmin tämä vaati paketin asentamista, uusimmissa versiossa suorittaminen onnistuu ilman asentamista erillisellä <em>npx</em>-ohjelmalla. Taustalla npx käy lataamassa väliaikaisesti tarvittavat koodit, suorittaa sen ja sen jälkeen poistaa suoritukseen ladatut koodit.</p>
+<p>Esimerkiksi seuraava komento käy lataamassa cowsay-nimisen npm-paketin, suorittaa sen antamalla sen syötteeksi komentorivin lopussa olevan tekstin ja poistaa lopuksi ladatut (ja väliaikaisesti) asennetut tiedostot.</p>
+<pre><code>npm cowsay &quot;Nyt lähtee homma käsistä!&quot;</code></pre>
+<p>Komento tuottaa seuraavan tulostuksen. Mahdolliseen varmistusviestiin voi vastata <strong>y</strong>.</p>
+<pre><code>Need to install the following packages:
+  cowsay
+Ok to proceed? (y) y
+ ___________________________
+&lt; Nyt lähtee homma käsistä! &gt;
+ ---------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||</code></pre>
+<p>Kuten tulosteesta voi päätellä, cowsay-paketista on loppujen lopuksi varsin vähän todellista hyötyä. npx-komennolla kannattaa ajaa harvoin tarvittavia paketteja, tällöin paketin asennus ei vie turhaa levytilaa ja ajettaessa käytetään aina uusinta versiota paketista.</p>
+</div>
+<div id="paketin-asentaminen-globaalisti" class="section level3 unnumbered">
+<h3>Paketin asentaminen globaalisti</h3>
+<p>npm-pakettien iso haittapuoli on niiden tarvitsema levytila. Yksittäisessä projektissa sillä ei ole juuri merkitystä, mutta tilantarve kertautuu tilanteissa, jossa samaa sovellusta tarvitaan useammassa projektissa. Tämänkaltaisissa tilanteissa npm-paketin voi asentaa ns. globaalisti eli niin, että se on käytettävissä missä tahansa kansiossa. Huomaa kuitenkin, että globaali asennus on käyttäjäkohtainen, se ei tee npm-paketin asennusta näkyväksi kaikille koneen käyttäjille.</p>
+<p>Tämän koulutuksen aikana tulemme hyödyntämään tehtävien tarkistuksessa automaattista tarkistusta. Käytännössä tämä tarkoittaa sitä, että tehtävän vastaus ajetaan tarkistustestien lävitse. Jotta voit jatkossa testata, että meneekö tekemäsi tehtävä testistä läbvitse, niin kannattaa levytilan kulutuksen vähentämiseksi asentaa tehtävissä käytettävät testauspaketit globaalisti.</p>
+</div>
+<div id="testcafe-paketin-asennus" class="section level3 unnumbered">
+<h3>TestCafe-paketin asennus</h3>
+<p>TestCafe on testausympäristö, jolla voi testata HTML-sivun toimintaa. Lisätietoja paketista löydät <a href="https://www.npmjs.com/package/testcafe">paketin kuvauksesta</a>. Asennetaan <em>testcafe</em>-paketti globaalisti komennolla</p>
+<pre><code>npm install -g testcafe</code></pre>
+<p>Komentorivillä <code>install</code> kertoo, että asennetaan uusi paketti, <code>-g</code> ilmaisee, että paketti asennetaan globaalisti ja <code>testcafe</code> on asennettavan paketin nimi. Komennon suoritus kestää jonkin aikaa ja ruudulle saattaa tulostua <em>npm WARN</em>-alkuisia varoitusrivejä. Asennusvaiheessa tulevat varotukset ovat ihan normaaleita, ne eivät estä sovelluksen asentumista ja suorittamista. Kun sovellus on asentunut, tulostuu ruudulle lopuksi seuraavankaltainen teksti:</p>
+<pre><code>added 462 packages, and audited 463 packages in 57s
+
+26 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities</code></pre>
+<p>Voit testata, että tescafe tuli asennettua ja se käynnistyy komennolla</p>
+<pre><code>testcafe -v</code></pre>
+<p>Jos ruudulle tulostuu testcafen versionumero, on kaikki kunnossa.</p>
+<pre><code>1.18.1</code></pre>
+</div>
+<div id="jest-paketin-asennus" class="section level3 unnumbered">
+<h3>Jest-paketin asennus</h3>
+<p>Jest on erityisesti JavaScriptin testaukseen soveltuva testausympäristö. Lisätietoja Jestistä löydät sen <a href="https://jestjs.io">kotisivuilta</a>. Asennetaan samalla tavalla jest-paketti globaalisti komennolla</p>
+<pre><code>npm install -g jest</code></pre>
+<p>Asennuksen jälkeen tulostuu seuraavankaltaiset tekstit ilmaisemaan asennuksen onnistumista.</p>
+<pre><code>added 323 packages, and audited 324 packages in 14s
+
+26 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities</code></pre>
+<p>Asennusta voi testata suorittamalla komento</p>
+<pre><code>jest -v</code></pre>
+<p>Jos tulokseksi tuli jestin versionumero, niin asennus onnistui.</p>
+<pre><code>27.4.7</code></pre>
+<p>npm-sovelluksen käyttö ja testauspakettien asennus käsitellään myös <a href="https://www.youtube.com/watch?v=ACkLEQ7QZH4">Koodauksen työvälineet - npm</a> -videossa.</p>
+</div>
+</div>
+<div id="visual-studio-code" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Visual Studio Code</h2>
+<p>Koodauksen yksi tärkeimmistä työkaluista on tekstieditori, jolla muokataan lähdekoodeja ja muita tekstitiedostoja. Periaatteessa tähän tarkoitukseen kelpaa melkein mikä tahansa tekstieditori, hätätilanteessa Windowsin Muistio toimii peruseditointiin. Jotta ohjelmakoodin kirjoittaminen olisi tehokasta ja tuottavaa, kannattaa käyttöön ottaa koodaamiseen erityisesti suunniteltu tekstieditori.</p>
+<p>Tässä materiaalissa käytetään Visual Studio Code -nimistä tekstieditoria, pääosin seuraavista syistä:</p>
+<ul>
+<li>Se on vapaan lähdekoodin projekti, toisin sanoen se on ilmainen.</li>
+<li>Sille löytyy valmiit asennuspaketit Windowsille, Linuxille ja macOs:lle.</li>
+<li>Se on kooltaan maltillinen ja se käynnistyy kohtuullisen nopeasti.</li>
+<li>Sille löytyy uskomaton määrä erilaisia lisäosia, joilla sen toiminnallisuutta pystyy laajentamaan.</li>
+<li>Siihen on sisäänrakennettu tuki Git-versiohallinnalle.</li>
+<li>Se on käytetyin tekstieditori Front End -kehityksessä.</li>
+</ul>
+<p>Halutessasi voit käyttää mitä tahansa muuta editoria, kuten esimerkiksi:</p>
+<ul>
+<li><a href="https://atom.io">Atom</a> (ilmainen)</li>
+<li><a href="https://www.sublimetext.com">Sublime Text</a> (maksullinen, kokeilujaksoa ei rajoitettu)</li>
+<li><a href="https://www.jetbrains.com/webstorm/">WebStorm</a> (maksullinen, opiskelijana mahdollisuus käyttää ilmaiseksi)</li>
+</ul>
+<div id="visual-studio-coden-asentaminen" class="section level3 unnumbered">
+<h3>Visual Studio Coden asentaminen</h3>
+<ol style="list-style-type: decimal">
+<li>Mene selaimella osoitteeseen <a href="https://code.visualstudio.com">https://code.visualstudio.com</a>.</li>
+</ol>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="kuvat/tyovalineet-vsc-asennus.png" alt="Visual Studio Code-sivusto" width="80%" />
+<p class="caption">
+Figure 1.4: Visual Studio Code-sivusto
+</p>
+</div>
+<p></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Klikkaa <strong>Download for Windows</strong>-nappia. Sivusto tunnistaa automaattisesti käyttämäsi käyttöjärjestelmän ja tarjoaa sitä vastaavaa asennuspakettia. Jos näin ei kuitenkaan tapahdu, niin klikkaa silloin sivun yläreunasta Downloads-linkkiä ja valitse sieltä käyttöjärjestelmääsi vastaava asennuspaketti.</p></li>
+<li><p>Käynnistä lataamasi asennuspaketti tuplaklikkaamalla sitä. Seuraavat ohjeet noudattavat Windows-paketin asennusvaiheita, jos asennat ympäristöä toiselle käyttöjärjestelmälle, niin asennuksen kulku on silloin erilainen.</p>
+<ul>
+<li><p>Hyväksy <em>License Agreement</em> -näkymässä lisenssi valitsemalla <strong>I accept the agreement</strong> ja klikkaa <strong>Next</strong>.</p></li>
+<li><p>Valitse <em>Select Additional Tasks</em>-näkymässä ne valinnat, jotka haluat ottaa käyttöön. Alla on suositeltavat valinnat:</p>
+<div class="figure">
+<img src="kuvat/tyovalineet-vsc-asennus-2.png" alt="" />
+<p class="caption">Select Additional Task -näkymän valinnat</p>
+</div>
+<p>Voit valita myös kohdan <strong>Register Code as an editor for Supported file types</strong>, jos et käytä aktiivisesti jotain toista tekstieditoria koodien ja muiden tekstitiedostojen muokkaamiseen.</p></li>
+<li><p>Käynnistä <em>Ready to Install</em> -näkymässä asennus klikkaamalla <strong>Install</strong>.</p></li>
+<li><p>Asennusohjelma asentaa kaikki tarvittavat tiedostot sekä määrittelee polkuasetuksen. Lopulta asennusohjelma päättyy <em>Completing the Visual Studio Code Setup Wizard</em> -näkymään, jossa voit klikata <strong>Finish</strong> päättääksesi asennusohjelman. Asennusohjelma käynnistää oletuksena viimeisenä vaiheena juuri asennetun Visual Studio Coden.</p></li>
+</ul></li>
+</ol>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="kuvat/tyovalineet-vsc-kaytto.png" alt="Visual Studio Code" width="80%" />
+<p class="caption">
+Figure 1.5: Visual Studio Code
+</p>
+</div>
+<p></p>
+</div>
+<div id="visual-studio-coden-testaaminen" class="section level3 unnumbered">
+<h3>Visual Studio Coden testaaminen</h3>
+<p>Visual Studio Code perustuu toiminta-ajatukseen, että projektia työstettäessä ei muokata projektin yksittäistä tiedostoa vaan muokkauksen alla on projektikansio ja sen alla olevat tiedostot. Tällöin Visual Studio Code tietää minkä projektin versiohallintaa sen tulisi seurata.</p>
+<p>Projektikansion avaaminen käsittelyyn tapahtuu klikkaamalla aloitusnäytöllä olevaa <strong>Open Folder…</strong>-linkkiä tai valitsemalla valikosta <strong>File</strong> &gt; <strong>Open Folder…</strong>. Voit tällä kertaa valita avattavaksi kansioksi käyttäjän <em>Tiedostot</em>-kansion alta löytyvä <strong>projektit</strong>-kansio.</p>
+<blockquote>
+<p>Muista seuraavalla kerralla avata nimenomainen projektikansio, jota haluat käsitellä. Päädyt ennen pitkää ongelmiin, jos sinulla on projektit-kansion alla useampi projekti joita työstät ja muokkaat kaikkia niin, että olet avannut Visual Studio Codessa projektit-kansion, etkä nimenomaista työn alla olevaa projektikansiota.</p>
+</blockquote>
+<p>Kansion avaamisen yhteydessä VSC saattaa varmistaa, että luotatko kansion sisällä olevien tiedostojen sisältöihin. Jos kansio sisältää sinun itsesi tai luotettavan tahon tuottamaa sisältöä, voit valita vaihtoehdon <strong>Yes, I trust the authors</strong>. Valitse toinen vaihtoehto, jos sinulla ei ole täyttä varmuutta koodin sisällöstä tai lähteestä.</p>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="kuvat/tyovalineet-vsc-kaytto-2.png" alt="Varmistus kansion sisällön luottamiseen" width="80%" />
+<p class="caption">
+Figure 1.6: Varmistus kansion sisällön luottamiseen
+</p>
+</div>
+<p></p>
+<p>Visual Studio Code -sovelluksen asennus ja peruskäyttö on kerrottu myös <a href="https://www.youtube.com/watch?v=C5nV4DVagf8">Koodauksen työvälineet - Visual Studio Code</a> -videossa.</p>
+</div>
+</div>
+<div id="git" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Git</h2>
+<p>Seuraava asennettava työkalu on Git-versiohallinta. Git on lähtökohtaisesti komentorivipohjainen työkalu, mutta esimerkiksi Visual Studio Code mahdollistaa Gitin käyttämisen graafisella käyttöliittymällä. Visual Studio Coden puolella Gitin ominaisuudet ovat käytettävissä heti, kun Gitin peruspaketti on asennettu järjestelmään.</p>
+<div id="gitin-asentaminen" class="section level3 unnumbered">
+<h3>Gitin asentaminen</h3>
+<ol style="list-style-type: decimal">
+<li>Mene selaimella osoitteeseen <a href="https://git-scm.com">https://git-scm.com</a>.</li>
+</ol>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="kuvat/tyovalineet-git-asennus.png" alt="Git-versiohallinnan kotisivut" width="80%" />
+<p class="caption">
+Figure 1.7: Git-versiohallinnan kotisivut
+</p>
+</div>
+<p></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Klikkaa <strong>Download for Windows</strong>-nappia. Sivusto tunnistaa automaattisesti käyttämäsi käyttöjärjestelmän ja tarjoaa sitä vastaavan asennustavan. Jos näin ei kuitenkaan tapahdu, niin klikkaa silloin sivulta löytyvää Downloads-linkkiä ja valitse sieltä käyttöjärjestelmääsi vastaava asennustapa.</p>
+<p>Valitse avautuvalta sivulta <strong>Click here to download</strong>-linkkiä, jolloin saat ladattua koneellesi asennuspaketin.</p></li>
+<li><p>Käynnistä lataamasi asennuspaketti tuplaklikkaamalla sitä. Seuraavat ohjeet noudattavat Windows-paketin asennusvaiheita, jos asennat ympäristöä toiselle käyttöjärjestelmälle, niin asennuksen kulku on silloin erilainen.</p>
+<ul>
+<li>Hyväksy <em>Information</em> -näkymässä oleva lisenssi valitsemalla <strong>Next</strong>.</li>
+<li>Klikkaa <em>Select Destination Location</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Select Components</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Select Start Menu Folder</em>-näkymässä <strong>Next</strong>.</li>
+<li>Valitse <em>Choosing the default editor user by Git</em>-näkymän listasta vaihtoehto <strong>Use Visual Studio Code as Git’s default editor</strong> ja jatka klikkaamalla <strong>Next</strong>.</li>
+<li>Klikkaa <em>Adjusting the name of the initial branch in new repositories</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Adjusting your PATH environment</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Choosing the SSH executable</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Choosing HTTPS transport backend</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Configuring the line ending conversions</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Configuring the terminal emulator to use with Git Bash</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Choose the default behaviour of ‘git pull’</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Choose a credential helper</em>-näkymässä <strong>Next</strong>.</li>
+<li>Klikkaa <em>Configuring extra options</em>-näkymässä <strong>Next</strong>.</li>
+<li>Aloita asennus <em>Configuring experimental options</em>-näkymässä klikkaamalla <strong>Install</strong>.</li>
+<li>Asennusohjelma asentaa kaikki tarvittavat tiedostot sekä määrittelee asetukset. Lopulta asennusohjelma päättyy <em>Completing the Git Setup Wizard</em> -näkymään, jossa voit klikata <strong>Finish</strong> päättääksesi asennusohjelman.</li>
+</ul></li>
+<li><p>Testaa Gitin asennuksen onnistuminen antamalla komentoriville komento</p>
+<pre><code>git --version</code></pre>
+<p>Asennus onnistui, jos komento tulostaa sinulle asennetun Gitin versionumeron:</p>
+<pre><code>git version 2.34.1.windows.1</code></pre></li>
+</ol>
+<p>Gitin asentaminen on kuvattu myös Pro Git -kirjan <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Getting Started - Installing Git</a> -luvussa.</p>
+</div>
+<div id="gitin-alkuasetukset" class="section level3 unnumbered">
+<h3>Gitin alkuasetukset</h3>
+<p>Jotta Gitiä voidaan ottaa käyttöön, on sille määriteltävä kaksi asetusta komentorivin kautta. Määritetään ensin käyttäjän nimi suorittamalla komentorivillä seuraava komento. Korvaa nimen paikalle oma nimesi.</p>
+<pre><code>git config --global user.name &quot;Koodaajaguru&quot;</code></pre>
+<p>Nimen lisäksi täytyy määritellä myös käyttäjän sähköpostiosoite. Nimi ja sähköpostiosoite tulee näkymään Git-repon hyväksytyissä commit-taltioinneissa. Määrittele sähköpostiosoite komennolla. Korvaa komentoon oma sähköpostiosoitteesi.</p>
+<pre><code>git config --global user.email koodaajaguru@gmail.com</code></pre>
+<p>Gitin alkuasetusten määrittelyä on selostettu Pro Git -kirjan <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Getting Started - First-Time Git Setup</a> -luvussa.</p>
+<p>Git -versiohallinnan asennus ja asetukset on kerrottu myös <a href="https://www.youtube.com/watch?v=cXF59q6jWT0">Koodauksen työvälineet - Git</a> -videossa.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["frontend.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

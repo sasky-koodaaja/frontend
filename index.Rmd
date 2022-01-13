@@ -1,0 +1,195 @@
+--- 
+title: "Front End -sovelluksen toteutus"
+author: "Pekka Tapio Aalto"
+date: "`r Sys.Date()`"
+url: https://github.com/sasky-koodaaja/frontend
+github-repo: sasky-koodaaja/frontend
+description: "Front End -sovelluksen toteutus Reactilla"
+cover-image: "images/logo.png"
+# Title page...
+maintitlepage:
+  epigraph: |
+    Tämä kirja on toteutettu seuraavilla työvälineillä:
+    \begin{itemize}
+      \item \LaTeX  ja memoir-luokka (\url{http://www.ctan.org/pkg/memoir}).
+      \item R (\url{http://www.r-project.org/}) ja RStudio (\url{http://www.rstudio.com/})
+      \item bookdown (\url{http://bookdown.org/}) ja memoiR (\url{https://ericmarcon.github.io/memoiR/})
+    \end{itemize}
+  credits: |
+    Pekka Tapio Aalto
+    
+    Huittisten ammatti- ja yrittäjäopisto
+    
+    SASKY koulutuskuntayhtymä
+    
+    \url{http://www.sasky.fi}
+# ... or a PDF cover
+pdftitlepage: images/cover.pdf
+# Language
+lang: finnish
+otherlangs: []
+# Bibliography
+# bibliography: references.bib
+# Citation style in HTML
+# citation-style: chicago-author-date.csl # By default.
+# LaTeX
+documentclass: memoir
+classoption:
+  - extrafontsizes
+  - onecolumn
+  - openright
+# Paper, font
+papersize: A4
+fontsize: 12pt
+# Fonts installed by a package. LaTeX tex-gyre package must be installed for:
+mainfont: texgyreheros          # Times New Roman for the text
+mainfontoptions:
+  - Extension=.otf
+  - UprightFont=*-regular
+  - BoldFont=*-bold
+  - BoldItalicFont=*-bolditalic
+  - ItalicFont=*-italic
+# mathfont: texgyreadventor-math.otf # Times New Roman for equations
+# memoir Style
+MemoirChapStyle: daleif1           # or companion with large margins
+MemoirPageStyle: Ruled             # or companion with large margins
+# Margins
+largemargins: false                # or true for large margins
+smallmargin: 1.0in                 # outer margin (small).
+largemargin: 3in                   # outer margin (large)
+marginnote:  1.8in                 # note width in large margin
+spinemargin: 1.5in                 # spine margin. Reduce to 1.2 with large margins.
+uppermargin: 1.5in                 # upper margin
+lowermargin: 1in                   # lower margin
+# Table of contents
+toc-depth: 2
+# Section numbering
+secnum-depth: section
+# List of tables / Figures
+lot: false
+lof: false
+# Bibliography
+biblatexoptions:
+  - backend=biber
+  - style=authoryear-ibid  # or verbose-inote with large margins
+# - pageref=true           # uncomment for verbose-inotes style
+  - isbn=false
+  - backref=true
+  - giveninits=true
+  - uniquename=init
+  - maxcitenames=2
+  - maxbibnames=150
+  - sorting=nyt
+  - sortcites=false
+longbibliography: false    # if true, two columns and smaller font in PDF
+# Chapter summary text
+chaptersummary: Tiivistetysti
+# Back Cover
+backcover:
+  - language: english
+    abstract: |
+      English abstract, on the last page.
+  
+      This is a bookdown template based on LaTeX memoir class.
+    keywords:
+      - Keyword in English
+      - As a list
+    abstractlabel: Abstract
+    keywordlabel: Keywords
+backcoverfontsize: normalsize
+# Figure cropping may be set to false if ghostscript is not installed
+fig_crop: true
+fig_caption: false
+# Do not modify
+site: bookdown::bookdown_site
+always_allow_html: true
+graphics: true
+link-citations: true
+colorlinks: true
+output:
+  bookdown::gitbook:
+    split_by: chapter
+---
+
+<!-- HTML code necessary for key messages --> 
+<img src="images/trombone.png" alt="image" hidden/>
+
+```{r DoNotModify, include=FALSE}
+### Utilities. Do not modify.
+# Installation of packages if necessary
+InstallPackages <- function(Packages) {
+  InstallPackage <- function(Package) {
+    if (!Package %in% installed.packages()[, 1]) {
+      install.packages(Package, repos="https://cran.rstudio.com/")
+    }
+  }
+  invisible(sapply(Packages, InstallPackage))
+}
+
+# Basic packages
+InstallPackages(c("bookdown", "formatR", "kableExtra", "magick", "ragg"))
+
+# kableExtra must be loaded 
+if (knitr::opts_knit$get("rmarkdown.pandoc.to") == "docx") {
+  # Word output (https://stackoverflow.com/questions/35144130/in-knitr-how-can-i-test-for-if-the-output-will-be-pdf-or-word)
+  # Do not use autoformat (https://github.com/haozhu233/kableExtra/issues/308)
+  options(kableExtra.auto_format = FALSE)
+}
+library("kableExtra")
+
+# Chunk font size hook: allows size='small' or any valid Latex font size in chunk options
+def.chunk.hook  <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(chunk = function(x, options) {
+  x <- def.chunk.hook(x, options)
+  ifelse(options$size != "normalsize", paste0("\n \\", options$size,"\n\n", x, "\n\n \\normalsize"), x)
+})
+
+# Figures with side captions
+if (rmarkdown::metadata$largemargins)
+  knitr::opts_chunk$set(fig.env='SCfigure')
+```
+
+```{r Options, include=FALSE}
+### Customized options for this document
+# Add necessary packages here
+Packages <- c( "tidyverse")
+# Install them
+InstallPackages(Packages)
+# Create packages.bib file to reference them as @R-package
+knitr::write_bib(Packages, file="packages.bib")
+
+# knitr options
+knitr::opts_chunk$set(
+  cache=FALSE, # Cache chunk results
+  echo = TRUE, # Show/Hide R chunks
+  warning=FALSE, # Show/Hide warnings
+  messages=FALSE, # Show/Hide messages
+  # Figure alignment and size
+  fig.align='center', out.width='80%', fig.asp=.75,
+  # Graphic devices (ragg_png is better than standard png)
+  dev = c("ragg_png", "pdf"),
+  # Code chunk format
+  tidy=TRUE, tidy.opts=list(blank=FALSE, width.cutoff=60),
+  size="scriptsize", knitr.graphics.auto_pdf = TRUE
+  )
+options(width=60)
+
+# ggplot style
+library("tidyverse")
+theme_set(theme_bw())
+theme_update(panel.background=element_rect(fill="transparent", colour=NA),
+             plot.background=element_rect(fill="transparent", colour=NA))
+knitr::opts_chunk$set(dev.args=list(bg="transparent"))
+
+# Random seed
+set.seed(973)
+```
+
+
+# Johdanto {-}
+
+Tämä kirja on tarkoitettu ensisijaisesti KOODAAJA FRONT END -koulutuksen opiskelumateriaaliksi. Osa kirjassa käsitellyistä asioista on sidoksissa koulutuksen toteutustapaan ja se tekee tämän kirjan käyttämisen itseopiskelumateriaalina haasteelliseksi.  
+
+<!-- The \mainmatter command marks the beginning of the LaTeX document body--> 
+<!-- It must not be deleted-->
+\mainmatter
