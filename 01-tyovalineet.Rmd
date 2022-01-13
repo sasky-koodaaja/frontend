@@ -464,5 +464,10 @@ Gitin alkuasetusten määrittelyä on selostettu Pro Git -kirjan [Getting Starte
 
 Git -versiohallinnan asennus ja asetukset on kerrottu myös [Koodauksen työvälineet - Git](https://www.youtube.com/watch?v=cXF59q6jWT0) -videossa.
 
+## GitHub
 
+GitHub on pilvipohjainen palvelu, jonne voi keskitetysti säilöä omia projekteja sekä tehdä projektin hallintaan liittyviä toimenpiteitä. Tähän materiaaliin lisätään myöhemmin ohjeistus GitHub-tunnuksen luonnista. GitHub-tunnusten luonti on kerrottu [Koodauksen työvälineet - GitHub](https://www.youtube.com/watch?v=Uwsp3SLRcz0) -videossa.
 
+## GitHub Desktop
+
+GitHub Desktop on omalle koneelle asennettava työpöytäsovellus, joka mahdollistaa Git-versiohallinnan käytön graafisella käyttöliittymällä. Tähän materiaaliin lisätään myöhemmin ohjeistus GitHub Desktop -sovelluksen asennuksesta ja peruskäytöstä. GitHub Desktop -sovelluksen asennus on neuvottu [Koodauksen työvälineet - GitHub Desktop](https://www.youtube.com/watch?v=iFcudxHwzFs) -videossa. 
