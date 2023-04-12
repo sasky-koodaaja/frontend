@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Huppista | Front End -sovelluksen toteutus</title>
-  <meta name="description" content="Huppista | Front End -sovelluksen toteutus Reactilla" />
+  <title>3 Reactin perusteet | Front End -sovelluksen toteutus</title>
+  <meta name="description" content="3 Reactin perusteet | Front End -sovelluksen toteutus Reactilla" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Huppista | Front End -sovelluksen toteutus" />
+  <meta property="og:title" content="3 Reactin perusteet | Front End -sovelluksen toteutus" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://github.com/sasky-koodaaja/frontend/images/logo.png" />
-  <meta property="og:description" content="Huppista | Front End -sovelluksen toteutus Reactilla" />
+  <meta property="og:description" content="3 Reactin perusteet | Front End -sovelluksen toteutus Reactilla" />
   <meta name="github-repo" content="sasky-koodaaja/frontend" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Huppista | Front End -sovelluksen toteutus" />
+  <meta name="twitter:title" content="3 Reactin perusteet | Front End -sovelluksen toteutus" />
   
-  <meta name="twitter:description" content="Huppista | Front End -sovelluksen toteutus Reactilla" />
+  <meta name="twitter:description" content="3 Reactin perusteet | Front End -sovelluksen toteutus Reactilla" />
   <meta name="twitter:image" content="https://github.com/sasky-koodaaja/frontend/images/logo.png" />
 
 <meta name="author" content="Pekka Tapio Aalto" />
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="github-classroom.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -211,24 +211,104 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div id="reactin-perusteet" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Reactin perusteet<a href="reactin-perusteet.html#reactin-perusteet" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="react-projektin-luominen" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> React-projektin luominen<a href="reactin-perusteet.html#react-projektin-luominen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ensimmäisenä vaiheena on uuden React-projektin luominen. React-projekti voidaan luoda useammalla eri tavalla, tällä kerralla käytämme Create React App -skriptin suositeltua tapaa. Luonnin yhteydessä määritellään käytettäväksi pohjaksi <em>cra-template-pwa</em>, joka alustaa React-projektista Progressive Web App eli PWA-sovelluksen.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb35-1"><a href="reactin-perusteet.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/projektit</span>
+<span id="cb35-2"><a href="reactin-perusteet.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> create-react-app burgerclicker <span class="at">--template</span> cra-template-pwa</span></code></pre></div>
+<p>Komennon tuloste riippuu käyttöjärjestelmästä ja asennattavasta versiosta, mutta sisältö on suunnilleen seuraavan kaltainen:</p>
+<pre><code>Creating a new React app in C:\Users\koodaajaguru\Documents\projektit\burgerclicker.
 
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template-pwa...
 
+...
+tässä välissä on paljon erilaista tekstiä
+...
 
-<div id="huppista" class="section level1">
-<h1>Huppista</h1>
-<p>Nyt vaikuttaisi siltä, että sivu on kadonnut maagisesti tai sitten
-olet tullut väärällä linkillä. On myös mahdollista, että sivun nimi on
-muutettu tai sivu on siirretty toiseen paikkaan.</p>
-<p>Hyvällä tuurilla voit löytää hakemasi sivun tämän dokumentin
-sisällysluettelosta.</p>
-<p>Pahoittelut aiheutuneesta ylimääräisestä vaivasta.</p>
+We suggest that you begin by typing:
+
+  cd burgerclicker
+  npm start
+
+Happy hacking!</code></pre>
+<p>Create React App -skripti alustaa valmiin projektipohjan, jonka päälle on helppo ja nopea lähteä toteuttamaan omaa React-sovellusta. Skripti asentaa todellisuudessa “kehitysympäräristön”, joka helpottaa sovelluksen kehityksen eri vaiheita. Aluksi hyödynnämme ainoastaan kehitystilaa, joka seuraa aktiivisesti projektiin tehtyjä muutoksia ja muodostaa tarvittaessa uuden, käännetyn esikatseluversion selaimelle. Myöhemmin käytämme myös muita ominaisuuksia, kuten sovelluksen paketoimista julkaisua varten.</p>
+</div>
+<div id="react-projektin-käynnistäminen" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> React-projektin käynnistäminen<a href="reactin-perusteet.html#react-projektin-käynnistäminen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Kun React-projektin kehitystä aloitetaan tai jatketaan, täytyy kehitysympäristö ensin käynnistää komentorivillä seuraavilla komennoilla:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb37-1"><a href="reactin-perusteet.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/projektit/burgerclicker</span>
+<span id="cb37-2"><a href="reactin-perusteet.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> start</span></code></pre></div>
+<p>Tämä komento käynnistää kehityspalvelimen, joka seuraa porjektin tiedostoihin tulleita muutoksia ja tarvittaessa kääntää projektista uuden selaimella toimivan kehitysversion. Pienen hetken päästä komentorivi-ikkunaan tulee seuraavan kaltainen näkymä:</p>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-24"></span>
+<img src="kuvat/react-perusteet-kaynnistaminen-1.png" alt="React-projektin kehityspalvelin käynnistetty" width="80%" />
+<p class="caption">
+Figure 3.1: React-projektin kehityspalvelin käynnistetty
+</p>
+</div>
+<p></p>
+<p>Kehityspalvelin toimii tavallaan yksinkertaisena www-palvelimena. Selain ottaa siihen yhteyden ihan samalla tavalla kuin mihin tahansa muuhunkin www-palvelimeen sivuston sisältöä hakiessaan.</p>
+<p>React-projekti näkyy nyt kahdesta eri osoitteesta. <code>http://localhost:3000</code> -osoite toimii ainoastaan samalla koneella. localhost viittaa aina tietokoneeseen itseensä. Jos haluat kokeilla projektia toiselta laitteelta, kuten esimerkiksi puhelimelta, niin käytä silloin numerosarjalla olevaa osoitetta. Tämän edellytyksenä on, että laitteesi on kytketty samaan verkkoon kuin tietokoneesi ja ettei tietokone estä verkosta tulevia pyyntöjä.</p>
+<p>Kaksoispisteen perässä oleva luku kertoo palvelimen porttinumeron. React-ympäristö käynnistetään oletuksena porttiin numero 3000. Jos tuo portti on varattuna, niin palvelin siirtyy käyttämään seuraavaa vapaana olevaa porttinumeroa, kuten esimerkiksi 3001. Tämä mahdollistaa esimerkiksi kahden React-projektin saman aikaisen kehittämisen.</p>
+<p>Tämän lisäksi selaimeen aukeaa projektin käännetty selainversio:</p>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-25"></span>
+<img src="kuvat/react-perusteet-kaynnistaminen-2.png" alt="React-projektin kehitysversio selaimessa" width="80%" />
+<p class="caption">
+Figure 3.2: React-projektin kehitysversio selaimessa
+</p>
+</div>
+<p></p>
+</div>
+<div id="ensimmäinen-react-luokka" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Ensimmäinen React-luokka<a href="reactin-perusteet.html#ensimmäinen-react-luokka" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Avaa Visual Studio Code ja avaa projektikansio valitsemalla ensin <strong>File</strong> &gt; <strong>Open Folder…</strong>. Valitse avattavaksi kansioksi <em>Documents/projektit</em>-kansion alla oleva <strong>burgerclicker</strong>-kansio.</p>
+<blockquote>
+<p>Tässä ohjeistuksessa käytetään tekstieditorina Visual Studio Codea, voit halutessasi käyttää mitä tahansa tekstieditoria.</p>
+</blockquote>
+<p>Avaa muokattavaksi <em>src</em>-kansion alta löytyvä <strong>App.js</strong>-tiedosto.</p>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-26"></span>
+<img src="kuvat/react-perusteet-ensimmainen-luokka-1.png" alt="App.js-tiedosto muokattavana Visual Studio Codessa" width="80%" />
+<p class="caption">
+Figure 3.3: App.js-tiedosto muokattavana Visual Studio Codessa
+</p>
+</div>
+<p></p>
+<p>Korvaa tiedostossa oleva koodi seuraavalla koodilla:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb38-1"><a href="reactin-perusteet.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> React<span class="op">,</span>{Component} <span class="im">from</span> <span class="st">&#39;react&#39;</span><span class="op">;</span></span>
+<span id="cb38-2"><a href="reactin-perusteet.html#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="reactin-perusteet.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Clicker <span class="kw">extends</span> Component {</span>
+<span id="cb38-4"><a href="reactin-perusteet.html#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">render</span>() {</span>
+<span id="cb38-5"><a href="reactin-perusteet.html#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb38-6"><a href="reactin-perusteet.html#cb38-6" aria-hidden="true" tabindex="-1"></a>      <span class="op">&lt;</span>h1<span class="op">&gt;</span>Burger Clicker<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
+<span id="cb38-7"><a href="reactin-perusteet.html#cb38-7" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
+<span id="cb38-8"><a href="reactin-perusteet.html#cb38-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb38-9"><a href="reactin-perusteet.html#cb38-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb38-10"><a href="reactin-perusteet.html#cb38-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-11"><a href="reactin-perusteet.html#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> Clicker<span class="op">;</span></span></code></pre></div>
+<p>Tallenna tekemäsi muutokset joko valitsemalla <strong>File</strong> &gt; <strong>Save</strong> tai pikanäppäinyhdistelmällä <strong>Ctrl+S</strong>. Siirry selaimeen ja odottele pieni hetki, jotta kehityspalvelin saa projektiin tulleet muutokset käännettyä. Selaimen näkymä on muutoksen jälkeen seuraavanlainen:</p>
+<p></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-27"></span>
+<img src="kuvat/react-perusteet-ensimmainen-luokka-2.png" alt="Ensimmäinen koodimuutoksen selainnäkymä" width="80%" />
+<p class="caption">
+Figure 3.4: Ensimmäinen koodimuutoksen selainnäkymä
+</p>
+</div>
+<p></p>
+<p>Ensimmäisessä koodimuutoksessa oli muutama asia, jotka olivat uusia ja tulevat seuraavissa vaiheissa toistumaan useasti.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="github-classroom.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

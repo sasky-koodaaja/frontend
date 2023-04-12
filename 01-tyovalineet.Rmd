@@ -217,7 +217,7 @@ node -v
 Tämä komento tulostaa asennetun ympäristön versionumeron, tässä materiaalissa asennetulla versiolla tulostuu 
 
 ```
-v17.3.1
+v19.4.0
 ```
 Asentamasi versio on todennäköisesti eri. Oleellista on, että komento tulostaa versionumeron, joka on sama tai uudempi kuin esimerkissä. Tarkistetaan myös, että npm-pakettihallinta on asentunut oikein syöttämällä komento
 
@@ -228,7 +228,7 @@ npm -v
 Komento tulostaa asennetun npm-sovelluksen versionumeron, joka on materiaalin asennuspaketilla
 
 ```
-8.3.0
+9.2.0
 ```
 
 Tässäkin tapauksessa versionumero voi poiketa. Oleellista on, että versionumero on sama tai uudempi kuin esimerkissä.
@@ -246,14 +246,14 @@ npm-pakettien suorittaminen vaatii, että niiden sovelluskoodit löytyvät suori
 Esimerkiksi seuraava komento käy lataamassa cowsay-nimisen npm-paketin, suorittaa sen antamalla sen syötteeksi komentorivin lopussa olevan tekstin ja poistaa lopuksi ladatut (ja väliaikaisesti) asennetut tiedostot.
 
 ```
-npm cowsay "Nyt lähtee homma käsistä!"
+npx cowsay "Nyt lähtee homma käsistä!"
 ```
 
 Komento tuottaa seuraavan tulostuksen. Mahdolliseen varmistusviestiin voi vastata **y**.  
 
 ```
 Need to install the following packages:
-  cowsay
+  cowsay@1.5.0
 Ok to proceed? (y) y
  ___________________________
 < Nyt lähtee homma käsistä! >
@@ -284,15 +284,17 @@ npm install -g testcafe
 Komentorivillä `install` kertoo, että asennetaan uusi paketti, `-g` ilmaisee, että paketti asennetaan globaalisti ja `testcafe` on asennettavan paketin nimi. Komennon suoritus kestää jonkin aikaa ja ruudulle saattaa tulostua *npm WARN*-alkuisia varoitusrivejä. Asennusvaiheessa tulevat varotukset ovat ihan normaaleita, ne eivät estä sovelluksen asentumista ja suorittamista. Kun sovellus on asentunut, tulostuu ruudulle lopuksi seuraavankaltainen teksti:
 
 ```
-added 462 packages, and audited 463 packages in 57s
+added 493 packages in 32s
 
-26 packages are looking for funding
+35 packages are looking for funding
   run `npm fund` for details
-
-found 0 vulnerabilities
 ```
 
-Voit testata, että tescafe tuli asennettua ja se käynnistyy komennolla 
+> MacOS- ja Linux-ympäristöissä käyttäjällä on usein rajoitetut oikeudet, joilla node-pakettien globaali asennus ei onnistu. Laita tällöin komennon eteen `sudo`, se suorittaa komennon pääkäyttäjän oikeuksilla.
+>
+> ```sudo npm install -g testcafe```
+
+Voit testata, että tescafe toimii komennolla 
 
 ```
 testcafe -v
@@ -301,7 +303,7 @@ testcafe -v
 Jos ruudulle tulostuu testcafen versionumero, on kaikki kunnossa.
 
 ```
-1.18.1
+2.5.0
 ```
 
 ### Jest-paketin asennus {-}
@@ -315,24 +317,22 @@ npm install -g jest
 Asennuksen jälkeen tulostuu seuraavankaltaiset tekstit ilmaisemaan asennuksen onnistumista.
 
 ```
-added 323 packages, and audited 324 packages in 14s
+added 278 packages in 39s
 
-26 packages are looking for funding
+31 packages are looking for funding
   run `npm fund` for details
-
-found 0 vulnerabilities
 ```
 
 Asennusta voi testata suorittamalla komento
 
 ```
-jest -v
+jest --version
 ```
 
 Jos tulokseksi tuli jestin versionumero, niin asennus onnistui.
 
 ```
-27.4.7
+29.5.0
 ```
 
 npm-sovelluksen käyttö ja testauspakettien asennus käsitellään myös [Koodauksen työvälineet - npm](https://www.youtube.com/watch?v=ACkLEQ7QZH4) -videossa.

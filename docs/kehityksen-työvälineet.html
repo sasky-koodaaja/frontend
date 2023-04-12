@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1 Kehityksen työvälineet | Front End -sovelluksen toteutus</title>
   <meta name="description" content="1 Kehityksen työvälineet | Front End -sovelluksen toteutus Reactilla" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1 Kehityksen työvälineet | Front End -sovelluksen toteutus" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://github.com/sasky-koodaaja/frontend" />
   <meta property="og:image" content="https://github.com/sasky-koodaaja/frontend/images/logo.png" />
   <meta property="og:description" content="1 Kehityksen työvälineet | Front End -sovelluksen toteutus Reactilla" />
   <meta name="github-repo" content="sasky-koodaaja/frontend" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Pekka Tapio Aalto" />
 
 
-<meta name="date" content="2022-01-13" />
+<meta name="date" content="2023-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="github-classroom.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,10 +49,75 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -122,6 +185,12 @@
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="github-classroom.html"><a href="github-classroom.html#tehtävään-vastaamisen-pikaohje"><i class="fa fa-check"></i><b>2.2</b> Tehtävään vastaamisen pikaohje</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="reactin-perusteet.html"><a href="reactin-perusteet.html"><i class="fa fa-check"></i><b>3</b> Reactin perusteet</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="reactin-perusteet.html"><a href="reactin-perusteet.html#react-projektin-luominen"><i class="fa fa-check"></i><b>3.1</b> React-projektin luominen</a></li>
+<li class="chapter" data-level="3.2" data-path="reactin-perusteet.html"><a href="reactin-perusteet.html#react-projektin-käynnistäminen"><i class="fa fa-check"></i><b>3.2</b> React-projektin käynnistäminen</a></li>
+<li class="chapter" data-level="3.3" data-path="reactin-perusteet.html"><a href="reactin-perusteet.html#ensimmäinen-react-luokka"><i class="fa fa-check"></i><b>3.3</b> Ensimmäinen React-luokka</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sasky-koodaaja/frontend" target="blank">toteutettu bookdownilla</a></li>
 
@@ -142,8 +211,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="kehityksen-työvälineet" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Kehityksen työvälineet</h1>
+<div id="kehityksen-työvälineet" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Kehityksen työvälineet<a href="kehityksen-työvälineet.html#kehityksen-työvälineet" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Sujuvassa Front End -sovellusten kehityksessä tarvitaan melkoinen määrä erilaisia työkaluja, kuten esimerkiksi</p>
 <ul>
 <li>komentorivi (PowerShell),</li>
@@ -152,13 +221,13 @@
 <li>lähdekoodin hallinta eli versiohallinta (Git).</li>
 </ul>
 <p>Seuraavaksi asennamme nämä työvälineet yksi kerrallaan ja testaamme yksinkertaisella testillä, että niiden asennus on onnistunut.</p>
-<div id="komentorivi" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Komentorivi</h2>
+<div id="komentorivi" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Komentorivi<a href="kehityksen-työvälineet.html#komentorivi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Ensimmäinen käyttöönotettava työväline on komentorivi. Ennen graafisia käyttöliittymiä tietokoneita käytettiin merkkipohjaisen komentorivin kautta. Sekä Front End että Back End -sovellusten kehityksessä on hyvä osata komentorivin perusteet.</p>
-<div id="komentorivin-käynnistäminen" class="section level3 unnumbered">
-<h3>Komentorivin käynnistäminen</h3>
-<div id="windows" class="section level4 unnumbered">
-<h4>Windows</h4>
+<div id="komentorivin-käynnistäminen" class="section level3 unnumbered hasAnchor">
+<h3>Komentorivin käynnistäminen<a href="kehityksen-työvälineet.html#komentorivin-käynnistäminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="windows" class="section level4 unnumbered hasAnchor">
+<h4>Windows<a href="kehityksen-työvälineet.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Windowsissa komentoriviä voi käyttää useammalla tavalla. Komentokehote (Command Prompt) perustuu DOS-käyttöjärjestelmän toimintaan ja se on osana nykyistä Windowsia yhteensopivuussyistä. Alkuperäisen komentokehotteen korvaajaksi on kehitetty PowerShell, joka toi Windows-maailmaan Unix-ympäristöissä pitkään olleita ominaisuuksia. Tämän koulutuksen aikana käytämme PowerShelliä.</p>
 <p>Helpoiten PowerShellin voi käynnistää kirjoittamalla Windowsin hakuikkunaan teksti <strong>powershell</strong> ja valitsemalla tarjotuista vaihtoehdoista <strong>Windows Powershell</strong>.</p>
 <p></p>
@@ -183,19 +252,19 @@ Figure 1.2: Powershell käynnistetty
 <p>Windowsissa voi käyttää myös Windows Terminal -sovellusta, joka löytyy ilmaiseksi Microsoft Storesta. Se tukee välilehtiä ja sen kautta pystyy käynnistämään PowerShell-istunnon, komentokehotteen (Command Prompt) tai halutessaan sille voi määritellä SSH-yhteyden omaksi valinnakseen.</p>
 </blockquote>
 </div>
-<div id="mac" class="section level4 unnumbered">
-<h4>Mac</h4>
+<div id="mac" class="section level4 unnumbered hasAnchor">
+<h4>Mac<a href="kehityksen-työvälineet.html#mac" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Macissä on oma komentorivinsä, jonka voi käynnistää käynnistää klikkaamalla <em>LaunchPad</em>-ikonia, kirjoittamalla hakukenttään <strong>Terminal</strong> ja valitsemalla sen jälkeen <strong>Terminal</strong>. Lisäohjeita löydät Macin <a href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">käyttöohjeista</a>.</p>
 </div>
-<div id="linux" class="section level4 unnumbered">
-<h4>Linux</h4>
+<div id="linux" class="section level4 unnumbered hasAnchor">
+<h4>Linux<a href="kehityksen-työvälineet.html#linux" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Jokaisesta Linuxista löytyy joku terminaali, haasteellisempaa on löytää se, miten se käynnistetään, koska käynnistäminen vaihtelee jakeluversiosta ja käytettävästä graafisesta ympäristöstä riippuen. Tyypillisesti se löytyy syöttämällä hakusanoiksi <em>terminal</em>, <em>command</em>, <em>prompt</em> tai <em>shell</em>. Useimmissa järjestelmissä komentorivi on nimeltään Terminal tai xterm. Monissa jakeluversiossa toimii myös pikanäppäinyhdistelmä <em>Ctrl+Alt+T</em>. Lisäohjeita löydät mm. Ubuntun <a href="https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal">käyttöohjeista</a>.</p>
 </div>
 </div>
-<div id="komentorivin-käyttäminen" class="section level3 unnumbered">
-<h3>Komentorivin käyttäminen</h3>
-<div id="kansiorakenteessa-liikkuminen" class="section level4 unnumbered">
-<h4>Kansiorakenteessa liikkuminen</h4>
+<div id="komentorivin-käyttäminen" class="section level3 unnumbered hasAnchor">
+<h3>Komentorivin käyttäminen<a href="kehityksen-työvälineet.html#komentorivin-käyttäminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="kansiorakenteessa-liikkuminen" class="section level4 unnumbered hasAnchor">
+<h4>Kansiorakenteessa liikkuminen<a href="kehityksen-työvälineet.html#kansiorakenteessa-liikkuminen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Riippumatta siitä, mitä käyttöjärjestelmää käytät, on komentorivin peruskäyttö hyvin samanlaista. Aivan ensimmäiseksi kannattaa opetella liikkumaan hakemistorakenteen sisällä. Lähtökohtaisesti komennolla <code>dir</code> saat listattua nykyisessä kansiossa olevat tiedostot ja hakemistot. Esimerkiksi Windowsissa komennon tulos näyttäisi seuraavanlaiselta:</p>
 <pre><code>PS C:\Users\Koodaajaguru&gt; dir
 
@@ -228,12 +297,12 @@ d-r---          5.9.2020     13.24                Videos
 <p>Jos olet eksynyt hakemistopuuhun ja haluat palata takaisin käyttäjän kotikansioon, niin se onnistuu helpoiten komennolla</p>
 <pre><code>cd ~</code></pre>
 </div>
-<div id="alikansion-luominen" class="section level4 unnumbered">
-<h4>Alikansion luominen</h4>
+<div id="alikansion-luominen" class="section level4 unnumbered hasAnchor">
+<h4>Alikansion luominen<a href="kehityksen-työvälineet.html#alikansion-luominen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Sen lisäksi, että osaat liikkua kansiorakenteessa, saatat joutua luomaan uusia alikansiota. Tämäkin tapahtuu peruspiirteissään samalla tavalla riippumatta siitä, että käytätkö Windowsia, Linuxia tai macOsia. Uusi alikansio luodaan <code>mkdir</code>-komennolla, joka on lyhenne sanoista <em>make directory</em>.</p>
 <p>Seuraavaksi luomme kotihakemistoon alikansion, jonne keräämme koulutuksen aikana toteutettavat projektit.</p>
-<div id="windows-1" class="section level5 unnumbered">
-<h5>Windows</h5>
+<div id="windows-1" class="section level5 unnumbered hasAnchor">
+<h5>Windows<a href="kehityksen-työvälineet.html#windows-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Siirrytään ensin käyttäjän Tiedostot-kansioon komennolla</p>
 <pre><code>cd ~/Documents</code></pre>
 <p>ja luodaan Tiedostot-kansioon uusi <em>projektit</em>-niminen alikansio komennolla</p>
@@ -241,8 +310,8 @@ d-r---          5.9.2020     13.24                Videos
 <p>Jatkossa pääset seuraavalla komennolla projektit-kansioon, aina kun käynnistät PowerShellin uudestaan.</p>
 <pre><code>cd ~/Documents/projektit</code></pre>
 </div>
-<div id="linux-ja-macos" class="section level5 unnumbered">
-<h5>Linux ja macOS</h5>
+<div id="linux-ja-macos" class="section level5 unnumbered hasAnchor">
+<h5>Linux ja macOS<a href="kehityksen-työvälineet.html#linux-ja-macos" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Unix-pohjaissa käyttöjärjestelmissä kotikansiomalli on erilainen kuin Windowsissa. Tästä johtuen luomme projektit-kansion käyttäjän kotikansion alle. Siirrytään ensin käyttäjän kotikansioon komennolla</p>
 <pre><code>cd ~</code></pre>
 <p>ja luodaan uusi <em>projektit</em>-niminen alikansio komennolla</p>
@@ -257,11 +326,11 @@ d-r---          5.9.2020     13.24                Videos
 </div>
 </div>
 </div>
-<div id="node.js" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Node.js</h2>
+<div id="node.js" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Node.js<a href="kehityksen-työvälineet.html#node.js" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Toinen jatkossa paljonkin käytettävä työväline on <em>Node.js</em>-ympäristö. Se on ajoympäristö, joka mahdollistaa JavaScriptillä toteutettujen ohjelmien suorittamisen omalla koneella. Node.js on ladattavissa yleisimmille käyttöjärjestelmille. Toisin sanoen sille löytyy valmiit asennuspaketit Windowsille, Linuxille ja macOSille.</p>
-<div id="node.jsn-asennus" class="section level3 unnumbered">
-<h3>Node.js:n asennus</h3>
+<div id="node.jsn-asennus" class="section level3 unnumbered hasAnchor">
+<h3>Node.js:n asennus<a href="kehityksen-työvälineet.html#node.jsn-asennus" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Mene selaimella osoitteeseen <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>.</li>
 </ol>
@@ -300,31 +369,31 @@ https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the executi
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is &quot;N&quot;): Y</code></pre></li>
 </ol>
 </div>
-<div id="asennuksen-onnistumisen-tarkistaminen" class="section level3 unnumbered">
-<h3>Asennuksen onnistumisen tarkistaminen</h3>
+<div id="asennuksen-onnistumisen-tarkistaminen" class="section level3 unnumbered hasAnchor">
+<h3>Asennuksen onnistumisen tarkistaminen<a href="kehityksen-työvälineet.html#asennuksen-onnistumisen-tarkistaminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Seuraavaksi tarkistetaan, että Node.js-ympäristö toimii niin, että voimme sitä jatkossa käyttää. Tulosta asennetun Node.js:n versionumero komennolla</p>
 <pre><code>node -v</code></pre>
 <p>Tämä komento tulostaa asennetun ympäristön versionumeron, tässä materiaalissa asennetulla versiolla tulostuu</p>
-<pre><code>v17.3.1</code></pre>
+<pre><code>v19.4.0</code></pre>
 <p>Asentamasi versio on todennäköisesti eri. Oleellista on, että komento tulostaa versionumeron, joka on sama tai uudempi kuin esimerkissä. Tarkistetaan myös, että npm-pakettihallinta on asentunut oikein syöttämällä komento</p>
 <pre><code>npm -v</code></pre>
 <p>Komento tulostaa asennetun npm-sovelluksen versionumeron, joka on materiaalin asennuspaketilla</p>
-<pre><code>8.3.0</code></pre>
+<pre><code>9.2.0</code></pre>
 <p>Tässäkin tapauksessa versionumero voi poiketa. Oleellista on, että versionumero on sama tai uudempi kuin esimerkissä.</p>
 <p>Nämä samat asiat käsitellään myös <a href="https://www.youtube.com/watch?v=bFELPMx68m8">Koodauksen työvälineet - Node.js</a> -videossa sillä erolla, että videossa asennetaan vanhempi versio Node.js-ympäristöstä.</p>
 </div>
 </div>
-<div id="npm" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> npm</h2>
+<div id="npm" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> npm<a href="kehityksen-työvälineet.html#npm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Node.js-ympäristön mukana asennettiin <em>npm</em>-niminen sovellus, jolla voi asentaa, päivittää ja poistaa npm-kirjastossa julkaistuja paketteja. npm tulee sanoista Node Package Management ja sen kirjasto sisältää uskomattoman määrän eri käyttötarkoituksiin toteutettuja JavaScript-sovelluksia, jotka auttavat joko sovelluskehityksessä, ylläpidossa tai niitä voi hyödyntää osana omaa sovellusta.</p>
-<div id="suoritus-ilman-asentamista" class="section level3 unnumbered">
-<h3>Suoritus ilman asentamista</h3>
+<div id="suoritus-ilman-asentamista" class="section level3 unnumbered hasAnchor">
+<h3>Suoritus ilman asentamista<a href="kehityksen-työvälineet.html#suoritus-ilman-asentamista" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>npm-pakettien suorittaminen vaatii, että niiden sovelluskoodit löytyvät suorittavalta koneelta. Aikaisemmin tämä vaati paketin asentamista, uusimmissa versiossa suorittaminen onnistuu ilman asentamista erillisellä <em>npx</em>-ohjelmalla. Taustalla npx käy lataamassa väliaikaisesti tarvittavat koodit, suorittaa sen ja sen jälkeen poistaa suoritukseen ladatut koodit.</p>
 <p>Esimerkiksi seuraava komento käy lataamassa cowsay-nimisen npm-paketin, suorittaa sen antamalla sen syötteeksi komentorivin lopussa olevan tekstin ja poistaa lopuksi ladatut (ja väliaikaisesti) asennetut tiedostot.</p>
-<pre><code>npm cowsay &quot;Nyt lähtee homma käsistä!&quot;</code></pre>
+<pre><code>npx cowsay &quot;Nyt lähtee homma käsistä!&quot;</code></pre>
 <p>Komento tuottaa seuraavan tulostuksen. Mahdolliseen varmistusviestiin voi vastata <strong>y</strong>.</p>
 <pre><code>Need to install the following packages:
-  cowsay
+  cowsay@1.5.0
 Ok to proceed? (y) y
  ___________________________
 &lt; Nyt lähtee homma käsistä! &gt;
@@ -336,47 +405,47 @@ Ok to proceed? (y) y
                 ||     ||</code></pre>
 <p>Kuten tulosteesta voi päätellä, cowsay-paketista on loppujen lopuksi varsin vähän todellista hyötyä. npx-komennolla kannattaa ajaa harvoin tarvittavia paketteja, tällöin paketin asennus ei vie turhaa levytilaa ja ajettaessa käytetään aina uusinta versiota paketista.</p>
 </div>
-<div id="paketin-asentaminen-globaalisti" class="section level3 unnumbered">
-<h3>Paketin asentaminen globaalisti</h3>
+<div id="paketin-asentaminen-globaalisti" class="section level3 unnumbered hasAnchor">
+<h3>Paketin asentaminen globaalisti<a href="kehityksen-työvälineet.html#paketin-asentaminen-globaalisti" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>npm-pakettien iso haittapuoli on niiden tarvitsema levytila. Yksittäisessä projektissa sillä ei ole juuri merkitystä, mutta tilantarve kertautuu tilanteissa, jossa samaa sovellusta tarvitaan useammassa projektissa. Tämänkaltaisissa tilanteissa npm-paketin voi asentaa ns. globaalisti eli niin, että se on käytettävissä missä tahansa kansiossa. Huomaa kuitenkin, että globaali asennus on käyttäjäkohtainen, se ei tee npm-paketin asennusta näkyväksi kaikille koneen käyttäjille.</p>
 <p>Tämän koulutuksen aikana tulemme hyödyntämään tehtävien tarkistuksessa automaattista tarkistusta. Käytännössä tämä tarkoittaa sitä, että tehtävän vastaus ajetaan tarkistustestien lävitse. Jotta voit jatkossa testata, että meneekö tekemäsi tehtävä testistä läbvitse, niin kannattaa levytilan kulutuksen vähentämiseksi asentaa tehtävissä käytettävät testauspaketit globaalisti.</p>
 </div>
-<div id="testcafe-paketin-asennus" class="section level3 unnumbered">
-<h3>TestCafe-paketin asennus</h3>
+<div id="testcafe-paketin-asennus" class="section level3 unnumbered hasAnchor">
+<h3>TestCafe-paketin asennus<a href="kehityksen-työvälineet.html#testcafe-paketin-asennus" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>TestCafe on testausympäristö, jolla voi testata HTML-sivun toimintaa. Lisätietoja paketista löydät <a href="https://www.npmjs.com/package/testcafe">paketin kuvauksesta</a>. Asennetaan <em>testcafe</em>-paketti globaalisti komennolla</p>
 <pre><code>npm install -g testcafe</code></pre>
 <p>Komentorivillä <code>install</code> kertoo, että asennetaan uusi paketti, <code>-g</code> ilmaisee, että paketti asennetaan globaalisti ja <code>testcafe</code> on asennettavan paketin nimi. Komennon suoritus kestää jonkin aikaa ja ruudulle saattaa tulostua <em>npm WARN</em>-alkuisia varoitusrivejä. Asennusvaiheessa tulevat varotukset ovat ihan normaaleita, ne eivät estä sovelluksen asentumista ja suorittamista. Kun sovellus on asentunut, tulostuu ruudulle lopuksi seuraavankaltainen teksti:</p>
-<pre><code>added 462 packages, and audited 463 packages in 57s
+<pre><code>added 493 packages in 32s
 
-26 packages are looking for funding
-  run `npm fund` for details
-
-found 0 vulnerabilities</code></pre>
-<p>Voit testata, että tescafe tuli asennettua ja se käynnistyy komennolla</p>
+35 packages are looking for funding
+  run `npm fund` for details</code></pre>
+<blockquote>
+<p>MacOS- ja Linux-ympäristöissä käyttäjällä on usein rajoitetut oikeudet, joilla node-pakettien globaali asennus ei onnistu. Laita tällöin komennon eteen <code>sudo</code>, se suorittaa komennon pääkäyttäjän oikeuksilla.</p>
+<p><code>sudo npm install -g testcafe</code></p>
+</blockquote>
+<p>Voit testata, että tescafe toimii komennolla</p>
 <pre><code>testcafe -v</code></pre>
 <p>Jos ruudulle tulostuu testcafen versionumero, on kaikki kunnossa.</p>
-<pre><code>1.18.1</code></pre>
+<pre><code>2.5.0</code></pre>
 </div>
-<div id="jest-paketin-asennus" class="section level3 unnumbered">
-<h3>Jest-paketin asennus</h3>
+<div id="jest-paketin-asennus" class="section level3 unnumbered hasAnchor">
+<h3>Jest-paketin asennus<a href="kehityksen-työvälineet.html#jest-paketin-asennus" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Jest on erityisesti JavaScriptin testaukseen soveltuva testausympäristö. Lisätietoja Jestistä löydät sen <a href="https://jestjs.io">kotisivuilta</a>. Asennetaan samalla tavalla jest-paketti globaalisti komennolla</p>
 <pre><code>npm install -g jest</code></pre>
 <p>Asennuksen jälkeen tulostuu seuraavankaltaiset tekstit ilmaisemaan asennuksen onnistumista.</p>
-<pre><code>added 323 packages, and audited 324 packages in 14s
+<pre><code>added 278 packages in 39s
 
-26 packages are looking for funding
-  run `npm fund` for details
-
-found 0 vulnerabilities</code></pre>
+31 packages are looking for funding
+  run `npm fund` for details</code></pre>
 <p>Asennusta voi testata suorittamalla komento</p>
-<pre><code>jest -v</code></pre>
+<pre><code>jest --version</code></pre>
 <p>Jos tulokseksi tuli jestin versionumero, niin asennus onnistui.</p>
-<pre><code>27.4.7</code></pre>
+<pre><code>29.5.0</code></pre>
 <p>npm-sovelluksen käyttö ja testauspakettien asennus käsitellään myös <a href="https://www.youtube.com/watch?v=ACkLEQ7QZH4">Koodauksen työvälineet - npm</a> -videossa.</p>
 </div>
 </div>
-<div id="visual-studio-code" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Visual Studio Code</h2>
+<div id="visual-studio-code" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Visual Studio Code<a href="kehityksen-työvälineet.html#visual-studio-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Koodauksen yksi tärkeimmistä työkaluista on tekstieditori, jolla muokataan lähdekoodeja ja muita tekstitiedostoja. Periaatteessa tähän tarkoitukseen kelpaa melkein mikä tahansa tekstieditori, hätätilanteessa Windowsin Muistio toimii peruseditointiin. Jotta ohjelmakoodin kirjoittaminen olisi tehokasta ja tuottavaa, kannattaa käyttöön ottaa koodaamiseen erityisesti suunniteltu tekstieditori.</p>
 <p>Tässä materiaalissa käytetään Visual Studio Code -nimistä tekstieditoria, pääosin seuraavista syistä:</p>
 <ul>
@@ -393,8 +462,8 @@ found 0 vulnerabilities</code></pre>
 <li><a href="https://www.sublimetext.com">Sublime Text</a> (maksullinen, kokeilujaksoa ei rajoitettu)</li>
 <li><a href="https://www.jetbrains.com/webstorm/">WebStorm</a> (maksullinen, opiskelijana mahdollisuus käyttää ilmaiseksi)</li>
 </ul>
-<div id="visual-studio-coden-asentaminen" class="section level3 unnumbered">
-<h3>Visual Studio Coden asentaminen</h3>
+<div id="visual-studio-coden-asentaminen" class="section level3 unnumbered hasAnchor">
+<h3>Visual Studio Coden asentaminen<a href="kehityksen-työvälineet.html#visual-studio-coden-asentaminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Mene selaimella osoitteeseen <a href="https://code.visualstudio.com">https://code.visualstudio.com</a>.</li>
 </ol>
@@ -430,8 +499,8 @@ Figure 1.5: Visual Studio Code
 </div>
 <p></p>
 </div>
-<div id="visual-studio-coden-testaaminen" class="section level3 unnumbered">
-<h3>Visual Studio Coden testaaminen</h3>
+<div id="visual-studio-coden-testaaminen" class="section level3 unnumbered hasAnchor">
+<h3>Visual Studio Coden testaaminen<a href="kehityksen-työvälineet.html#visual-studio-coden-testaaminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Visual Studio Code perustuu toiminta-ajatukseen, että projektia työstettäessä ei muokata projektin yksittäistä tiedostoa vaan muokkauksen alla on projektikansio ja sen alla olevat tiedostot. Tällöin Visual Studio Code tietää minkä projektin versiohallintaa sen tulisi seurata.</p>
 <p>Projektikansion avaaminen käsittelyyn tapahtuu klikkaamalla aloitusnäytöllä olevaa <strong>Open Folder…</strong>-linkkiä tai valitsemalla valikosta <strong>File</strong> &gt; <strong>Open Folder…</strong>. Voit tällä kertaa valita avattavaksi kansioksi käyttäjän <em>Tiedostot</em>-kansion alta löytyvä <strong>projektit</strong>-kansio.</p>
 <blockquote>
@@ -449,11 +518,11 @@ Figure 1.6: Varmistus kansion sisällön luottamiseen
 <p>Visual Studio Code -sovelluksen asennus ja peruskäyttö on kerrottu myös <a href="https://www.youtube.com/watch?v=C5nV4DVagf8">Koodauksen työvälineet - Visual Studio Code</a> -videossa.</p>
 </div>
 </div>
-<div id="git" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Git</h2>
+<div id="git" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Git<a href="kehityksen-työvälineet.html#git" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Seuraava asennettava työkalu on Git-versiohallinta. Git on lähtökohtaisesti komentorivipohjainen työkalu, mutta esimerkiksi Visual Studio Code mahdollistaa Gitin käyttämisen graafisella käyttöliittymällä. Visual Studio Coden puolella Gitin ominaisuudet ovat käytettävissä heti, kun Gitin peruspaketti on asennettu järjestelmään.</p>
-<div id="gitin-asentaminen" class="section level3 unnumbered">
-<h3>Gitin asentaminen</h3>
+<div id="gitin-asentaminen" class="section level3 unnumbered hasAnchor">
+<h3>Gitin asentaminen<a href="kehityksen-työvälineet.html#gitin-asentaminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Mene selaimella osoitteeseen <a href="https://git-scm.com">https://git-scm.com</a>.</li>
 </ol>
@@ -494,8 +563,8 @@ Figure 1.7: Git-versiohallinnan kotisivut
 </ol>
 <p>Gitin asentaminen on kuvattu myös Pro Git -kirjan <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Getting Started - Installing Git</a> -luvussa.</p>
 </div>
-<div id="gitin-alkuasetukset" class="section level3 unnumbered">
-<h3>Gitin alkuasetukset</h3>
+<div id="gitin-alkuasetukset" class="section level3 unnumbered hasAnchor">
+<h3>Gitin alkuasetukset<a href="kehityksen-työvälineet.html#gitin-alkuasetukset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Jotta Gitiä voidaan ottaa käyttöön, on sille määriteltävä kaksi asetusta komentorivin kautta. Määritetään ensin käyttäjän nimi suorittamalla komentorivillä seuraava komento. Korvaa nimen paikalle oma nimesi.</p>
 <pre><code>git config --global user.name &quot;Koodaajaguru&quot;</code></pre>
 <p>Nimen lisäksi täytyy määritellä myös käyttäjän sähköpostiosoite. Nimi ja sähköpostiosoite tulee näkymään Git-repon hyväksytyissä commit-taltioinneissa. Määrittele sähköpostiosoite komennolla. Korvaa komentoon oma sähköpostiosoitteesi.</p>
@@ -504,12 +573,12 @@ Figure 1.7: Git-versiohallinnan kotisivut
 <p>Git -versiohallinnan asennus ja asetukset on kerrottu myös <a href="https://www.youtube.com/watch?v=cXF59q6jWT0">Koodauksen työvälineet - Git</a> -videossa.</p>
 </div>
 </div>
-<div id="github" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> GitHub</h2>
+<div id="github" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> GitHub<a href="kehityksen-työvälineet.html#github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>GitHub on pilvipohjainen palvelu, jonne voi keskitetysti säilöä omia projekteja sekä tehdä projektin hallintaan liittyviä toimenpiteitä. Tähän materiaaliin lisätään myöhemmin ohjeistus GitHub-tunnuksen luonnista. GitHub-tunnusten luonti on kerrottu <a href="https://www.youtube.com/watch?v=Uwsp3SLRcz0">Koodauksen työvälineet - GitHub</a> -videossa.</p>
 </div>
-<div id="github-desktop" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> GitHub Desktop</h2>
+<div id="github-desktop" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> GitHub Desktop<a href="kehityksen-työvälineet.html#github-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>GitHub Desktop on omalle koneelle asennettava työpöytäsovellus, joka mahdollistaa Git-versiohallinnan käytön graafisella käyttöliittymällä. Tähän materiaaliin lisätään myöhemmin ohjeistus GitHub Desktop -sovelluksen asennuksesta ja peruskäytöstä. GitHub Desktop -sovelluksen asennus on neuvottu <a href="https://www.youtube.com/watch?v=iFcudxHwzFs">Koodauksen työvälineet - GitHub Desktop</a> -videossa.</p>
 
 </div>

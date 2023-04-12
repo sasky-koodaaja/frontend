@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 GitHub Classroom | Front End -sovelluksen toteutus</title>
   <meta name="description" content="2 GitHub Classroom | Front End -sovelluksen toteutus Reactilla" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 GitHub Classroom | Front End -sovelluksen toteutus" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://github.com/sasky-koodaaja/frontend" />
   <meta property="og:image" content="https://github.com/sasky-koodaaja/frontend/images/logo.png" />
   <meta property="og:description" content="2 GitHub Classroom | Front End -sovelluksen toteutus Reactilla" />
   <meta name="github-repo" content="sasky-koodaaja/frontend" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Pekka Tapio Aalto" />
 
 
-<meta name="date" content="2022-01-13" />
+<meta name="date" content="2023-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +31,7 @@
   
   
 <link rel="prev" href="kehityksen-työvälineet.html"/>
-
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<link rel="next" href="reactin-perusteet.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,10 +49,75 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -122,6 +185,12 @@
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="github-classroom.html"><a href="github-classroom.html#tehtävään-vastaamisen-pikaohje"><i class="fa fa-check"></i><b>2.2</b> Tehtävään vastaamisen pikaohje</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="reactin-perusteet.html"><a href="reactin-perusteet.html"><i class="fa fa-check"></i><b>3</b> Reactin perusteet</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="reactin-perusteet.html"><a href="reactin-perusteet.html#react-projektin-luominen"><i class="fa fa-check"></i><b>3.1</b> React-projektin luominen</a></li>
+<li class="chapter" data-level="3.2" data-path="reactin-perusteet.html"><a href="reactin-perusteet.html#react-projektin-käynnistäminen"><i class="fa fa-check"></i><b>3.2</b> React-projektin käynnistäminen</a></li>
+<li class="chapter" data-level="3.3" data-path="reactin-perusteet.html"><a href="reactin-perusteet.html#ensimmäinen-react-luokka"><i class="fa fa-check"></i><b>3.3</b> Ensimmäinen React-luokka</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sasky-koodaaja/frontend" target="blank">toteutettu bookdownilla</a></li>
 
@@ -142,14 +211,14 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="github-classroom" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> GitHub Classroom</h1>
+<div id="github-classroom" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> GitHub Classroom<a href="github-classroom.html#github-classroom" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Front End -koulutuksen aikana tulee tehviä, joissa harjoitellaan ohjelmoinnin käsitteitä. Tehtävät suoritetaan GitHub Classroom -ympäristössä ja niihin vastaaminen tapahtuu normaalin GitHub-työkulun mukaisesti.</p>
 <blockquote>
 <p>Tehtävän työkulku vo tuntua aluksi turhan monivaiheiselta, mutta kannattaa muistaa, että samalla tulee harjoiteltua Git-versiohallinnan ja GitHub-palvelun sujuvaa käyttöä.</p>
 </blockquote>
-<div id="tehtävään-vastaaminen-githubissa" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Tehtävään vastaaminen GitHubissa</h2>
+<div id="tehtävään-vastaaminen-githubissa" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Tehtävään vastaaminen GitHubissa<a href="github-classroom.html#tehtävään-vastaaminen-githubissa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Vastaaminen tapahtuu seuraavissa vaiheissa:</p>
 <ul>
 <li>käyttöoikeuden myöntäminen GitHubille</li>
@@ -162,8 +231,8 @@
 <li>muutosten vieminen paikalliseen repoon (commit)</li>
 <li>tehtävän palautus GitHubiin (push)</li>
 </ul>
-<div id="käyttöoikeuden-myöntäminen-githubille" class="section level3 unnumbered">
-<h3>Käyttöoikeuden myöntäminen GitHubille</h3>
+<div id="käyttöoikeuden-myöntäminen-githubille" class="section level3 unnumbered hasAnchor">
+<h3>Käyttöoikeuden myöntäminen GitHubille<a href="github-classroom.html#käyttöoikeuden-myöntäminen-githubille" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ensimmäiseksi tehtävä vastaanotetaan klikkaamalla Moodlen kurssisivulla olevaa tehtävälinkkiä. Linkki vie sinut tehtävän GitHub Classroom -sivulle, jossa vastaanotat tehtävän.</p>
 <p>Jos olet tekemässä tätä ensimmäistä kertaa, GitHub haluaa varmistaa, että haluat myöntää GitHub Classroom -sovellukselle oikeuden käyttää omaa GitHub-tiliäsi. Kirjaudu sisälle GitHub-tunnuksillasi, anna oikeudet painamalla <strong>Authorize GitHub</strong> -nappia ja klikkaa tämän jälkeen listasta omaa nimeäsi. Sivusto varmistaa vielä, että klikkasit varmasti omaa nimeäsi. Hyväksy valinta klikkaamalla <strong>OK</strong>. Jos et löydä nimeäsi listalta, niin klikkaa <strong>Skip to the next step</strong> -linkkiä.</p>
 <p></p>
@@ -175,8 +244,8 @@ Figure 2.1: Käyttöoikeuden antaminen GitHubille
 </div>
 <p></p>
 </div>
-<div id="tehtävän-vastaanottaminen" class="section level3 unnumbered">
-<h3>Tehtävän vastaanottaminen</h3>
+<div id="tehtävän-vastaanottaminen" class="section level3 unnumbered hasAnchor">
+<h3>Tehtävän vastaanottaminen<a href="github-classroom.html#tehtävän-vastaanottaminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Hyväksy tehtävä klikkaamalla <strong>Accept this assignment</strong> -nappia ja odota, että palvelu saa kopioitua tehtävän tiedot sinulle luotuun uuteen repoon. Klikkaa luonnin jälkeen repositoryn linkkiä, niin pääset tehtävän projektisivulle.</p>
 <p>GitHub Classroom näkymä kopioinnin osalta on hieman muuttunut, mutta lopulta päädyt samanlaiselle sivulle, kuin animaatiossa.</p>
 <p></p>
@@ -188,8 +257,8 @@ Figure 2.2: Tehtävän vastaanottaminen
 </div>
 <p></p>
 </div>
-<div id="tehtävän-kopioiminen-omalle-koneelle" class="section level3 unnumbered">
-<h3>Tehtävän kopioiminen omalle koneelle</h3>
+<div id="tehtävän-kopioiminen-omalle-koneelle" class="section level3 unnumbered hasAnchor">
+<h3>Tehtävän kopioiminen omalle koneelle<a href="github-classroom.html#tehtävän-kopioiminen-omalle-koneelle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ennen kuin tehtävän voi suorittaa, se kopioidaan omalle koneelle. Tämä tapahtuu klikkaamalla projektisivulla olevaa vihreää <strong>Code</strong>-nappia ja klikkaamalla avautuvasta ikkunasta osoitteen kopioiminen työpöydälle-kuvaketta.</p>
 <p>Valitse tämän jälkeen GitHub Desktop -sovelluksessa <strong>Clone a repository from the Internet</strong> -kohta, avaa URL-välilehti ja liitä kopioimasi osoite <em>Repository URL</em> -kenttään. Varmista, että <em>Local path</em> -kentässä on oikea kansio valittuna.</p>
 <p>Klikkaa <strong>Clone</strong>-nappia, jolloin tehtävän tiedot kopioidaan omalle koneellesi.</p>
@@ -202,8 +271,8 @@ Figure 2.3: Tehtävän kopioiminen omalle koneelle
 </div>
 <p></p>
 </div>
-<div id="tehtävän-avaaminen-visual-studio-codessa" class="section level3 unnumbered">
-<h3>Tehtävän avaaminen Visual Studio Codessa</h3>
+<div id="tehtävän-avaaminen-visual-studio-codessa" class="section level3 unnumbered hasAnchor">
+<h3>Tehtävän avaaminen Visual Studio Codessa<a href="github-classroom.html#tehtävän-avaaminen-visual-studio-codessa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Avaa tehtävä Visual Studio Codessa valitsemalla <strong>File</strong> &gt; <strong>Open Folder…</strong> Avautuvaan ikkunaan valitaan se kansio, jonne tehtävämateriaalit edellisessä vaiheessa kopioitiin. Valittu kansio hyväksytään klikkaamalla <strong>Select Folder</strong> -nappia.</p>
 <p>Tämän jälkeen vasemmassa reunassa olevasta tiedostonäkymästä avataan <em>tehtava</em>-kansiosta löytyvä <strong>tehtava.html</strong> -tiedosto.</p>
 <p></p>
@@ -215,8 +284,8 @@ Figure 2.4: Tehtävän avaaminen Visual Studio Codessa
 </div>
 <p></p>
 </div>
-<div id="muutosten-tekeminen-ja-tallentaminen" class="section level3 unnumbered">
-<h3>Muutosten tekeminen ja tallentaminen</h3>
+<div id="muutosten-tekeminen-ja-tallentaminen" class="section level3 unnumbered hasAnchor">
+<h3>Muutosten tekeminen ja tallentaminen<a href="github-classroom.html#muutosten-tekeminen-ja-tallentaminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Lue tehtävätiedostossa olevat ohjeet ja kirjoita tämän jälkeen ohjetekstin alapuolelle teksti <em>Hei Koodaajaguru, nyt aloitetaan koodaaminen!</em>.</p>
 <p>Tallenna tekemäsi muutokset valitsemalla <strong>File</strong> &gt; <strong>Save</strong>. Voit tallentaa muutokset myös pikanäppäimellä <strong>Ctrl</strong> + <strong>S</strong>.</p>
 <p></p>
@@ -228,8 +297,8 @@ Figure 2.5: Muutosten tekeminen ja tallentaminen
 </div>
 <p></p>
 </div>
-<div id="koodin-suorittaminen" class="section level3 unnumbered">
-<h3>Koodin suorittaminen</h3>
+<div id="koodin-suorittaminen" class="section level3 unnumbered hasAnchor">
+<h3>Koodin suorittaminen<a href="github-classroom.html#koodin-suorittaminen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Koodin tehdyt muutokset kannattaa testata tasaisin väliajoin. Harvemmin virheellinen koodi korjaantuu myöhemmissä vaiheissa taianomaisesti, vaan virheen syy kannattaa selvittää välittömästi.</p>
 <p>HTML-sivulla olevan koodin pystyy testaamaan avaamalla sivun webbiselaimessa. Helpoiten tämä onnistuu tuplaklikkaamalla tiedostokuvakkeen päällä, jolloin tiedosto avautuu selaimeen.</p>
 <p></p>
@@ -241,8 +310,8 @@ Figure 2.6: Koodin suorittaminen
 </div>
 <p></p>
 </div>
-<div id="testaaminen-testausskriptillä" class="section level3 unnumbered">
-<h3>Testaaminen testausskriptillä</h3>
+<div id="testaaminen-testausskriptillä" class="section level3 unnumbered hasAnchor">
+<h3>Testaaminen testausskriptillä<a href="github-classroom.html#testaaminen-testausskriptillä" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Tehtäviin on sisällytetty myös testausskripti, jolla vastauksen oikeellisuuden pystyy varmistamaan. Testausskripti suoritetaan valitsemalla <strong>Terminal</strong> &gt; <strong>New Terminal</strong> ja antamalla avautuvaan terminaali-ikkunaan komento</p>
 <pre><code>npm test</code></pre>
 <p>Jos ruudulle tulostuu vihreä <em>passed</em>-teksti, niin silloin tekemäsi muutokset läpäisivät testin. Tällöin voit palauttaa tehtäväsi vastauksen. Jos ruudulle tulostui punainen <em>failed</em> -teksti, niin silloin koodissasi on jokin virhe ja se täytyy korjata.</p>
@@ -255,8 +324,8 @@ Figure 2.7: Testaaminen testausskriptillä
 </div>
 <p></p>
 </div>
-<div id="muutosten-vieminen-paikalliseen-repoon" class="section level3 unnumbered">
-<h3>Muutosten vieminen paikalliseen repoon</h3>
+<div id="muutosten-vieminen-paikalliseen-repoon" class="section level3 unnumbered hasAnchor">
+<h3>Muutosten vieminen paikalliseen repoon<a href="github-classroom.html#muutosten-vieminen-paikalliseen-repoon" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Tehtävään tekemäsi muutokset täytyy viedä ensin paikallisessa projektikansiossa olevaan repoon ennen, kuin voit palauttaa tehtävän. Tätä toimipidettä kutsutaan <em>commitiksi</em>.</p>
 <p>Aktivoi ensin <strong>versiohallintanäkymä</strong> Visual Studio Coden vasemman reunan palkista. Klikkaa <em>tehtava.html</em> -tiedoston oikealla puolella olevaa <strong>+</strong>-kuvaketta. Tämä merkitsee ko. tiedoston valituksi seuraavaan hyväksyntään (commitiin). Kirjoita tiedostoalueen yläpuolella olevaan tekstikenttään <code>Tehtävä suoritettu</code> ja klikkaa lopuksi <strong>commit</strong>-ikonia.</p>
 <p>Tämän seurauksena tehtava.html-tiedostoon tekemäsi muutokset tallennettiin paikalliseen git-repoon committina. Nyt tekemäsi muutokset ovat valmiina palautukseen.</p>
@@ -269,8 +338,8 @@ Figure 2.8: Muutosten vieminen paikalliseen repoon
 </div>
 <p></p>
 </div>
-<div id="tehtävän-palautus-githubiin" class="section level3 unnumbered">
-<h3>Tehtävän palautus GitHubiin</h3>
+<div id="tehtävän-palautus-githubiin" class="section level3 unnumbered hasAnchor">
+<h3>Tehtävän palautus GitHubiin<a href="github-classroom.html#tehtävän-palautus-githubiin" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Viimeisenä vaiheena on paikallisten muutosten vieminen GitHubissa olevaan repoon, jolloin vastaus näkyy myös opettajalle. Tämä tapahtuu valitsemalla <strong>…* &gt; </strong>pull, push** &gt; <strong>push</strong>.</p>
 <p>Voit tarkistaa palautuksen onnistumisen GitHubin projektisivulta. Sivulle pitäisi päivittyä commitissa antamasi tiedot sekä automaattitarkistuksen tulos. Automaattitarkistus tapahtuu taustaajona ja se vie muutaman minuutin.</p>
 <p>Commit-riville tulostuu <em>vihreä väkänen</em>, jos palauttamasi koodi on hyväksytty. <em>Keltainen pallo</em> merkitsee, että testiä ollaan vielä suorittamassa. <em>Punainen ruksi</em> puolestaan ilmoittaa, että koodi ei läpäissyt testiä.</p>
@@ -284,8 +353,8 @@ Figure 2.9: Tehtävän palautus GitHubiin
 <p></p>
 </div>
 </div>
-<div id="tehtävään-vastaamisen-pikaohje" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Tehtävään vastaamisen pikaohje</h2>
+<div id="tehtävään-vastaamisen-pikaohje" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Tehtävään vastaamisen pikaohje<a href="github-classroom.html#tehtävään-vastaamisen-pikaohje" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Edellä kuvattiin tehtävään vastaaminen seikkaperäisesti vaihe vaiheelta. Jatkossa voit vastata tehtäviin seuraavan pikaohjeen mukaisesti.</p>
 <ol style="list-style-type: decimal">
 <li>Vastaanota tehtävä klikkaamalla tehtävän linkkiä Moodlessa ja hyväksy tehtävä klikkaamalla <strong>Accept this assignment</strong> -nappia.</li>
@@ -374,8 +443,8 @@ Figure 2.16: Vastauksen palautus
           </div>
         </div>
       </div>
-<a href="kehityksen-työvälineet.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="kehityksen-työvälineet.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reactin-perusteet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
